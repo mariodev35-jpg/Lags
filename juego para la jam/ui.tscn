@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://p75c6u6u6p2x"]
+
+[ext_resource type="Script" uid="uid://bo56ffweesgqq" path="res://ui.gd" id="1_27fn8"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://virtual_joystick (1)/virtual_joystick_scene.tscn" id="1_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://b6s6dkhvwlvas" path="res://icon.svg" id="2_27fn8"]
+[ext_resource type="Texture2D" uid="uid://dpbnc7xuset4i" path="res://Sprite /piesa_interaccion.png" id="4_nltto"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1289846114]
+script = ExtResource("1_27fn8")
+
+[node name="Virtual Joystick" parent="." unique_id=1191086780 instance=ExtResource("1_m6e0p")]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." unique_id=140673371]
+position = Vector2(1010, 420)
+texture_normal = ExtResource("2_27fn8")
+action = "ui_accept"
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=310375716]
+offset_right = 50.0
+offset_bottom = 280.0
+max_value = 5.349
+value = 5.349
+fill_mode = 3
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="." unique_id=204864859]
+position = Vector2(982, 181)
+texture_normal = ExtResource("2_27fn8")
+action = "use"
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=303621245]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(49.678, 43.342)
+texture = ExtResource("4_nltto")
+
+[node name="Label" type="Label" parent="." unique_id=2105889332]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -16.0
+offset_right = 101.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "interactuar"

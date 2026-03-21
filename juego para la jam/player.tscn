@@ -1,0 +1,294 @@
+[gd_scene format=3 uid="uid://crpualumjwf"]
+
+[ext_resource type="Script" uid="uid://dijixc4hxkwbb" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="AudioStream" uid="uid://cyqsw8nemwjs7" path="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose.ogg" id="2_hqtel"]
+[ext_resource type="AudioStream" uid="uid://w0vlr774pdb" path="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose (1).ogg" id="3_sweqy"]
+[ext_resource type="AudioStream" uid="uid://cyaiqwe46m3av" path="res://Efectos de sonidos /Ambiente /fx expansion de la sombre.ogg" id="4_2hs0m"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4flbx"]
+
+[sub_resource type="Animation" id="Animation_4flbx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/OmniLight3D:omni_range")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.3488784]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:lus")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [100]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.6]
+}
+
+[sub_resource type="Animation" id="Animation_onrkg"]
+resource_name = "ilu"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/OmniLight3D:omni_range")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.3488784]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:lus")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [100]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sonudos/paso")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0.033333335)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+resource_name = "osvu"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/OmniLight3D:omni_range")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [5.3488784, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:lus")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [100, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/OmniLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sonudos/paso")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 5.155,
+"start_offset": 0.0,
+"stream": ExtResource("2_hqtel")
+}, {
+"end_offset": 0.0,
+"start_offset": 10.3737,
+"stream": ExtResource("3_sweqy")
+}],
+"times": PackedFloat32Array(0.23333335, 10.233334)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sonudos/paso")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 4.1395,
+"start_offset": 0.0,
+"stream": ExtResource("4_2hs0m")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_2hs0m")
+}],
+"times": PackedFloat32Array(0.16666675, 6.133333)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_hqtel"]
+resource_name = "serca"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/OmniLight3D:omni_range")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8.122]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D/OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.6]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sonudos/paso")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0.13333334)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
+_data = {
+&"RESET": SubResource("Animation_4flbx"),
+&"ilu": SubResource("Animation_onrkg"),
+&"osvu": SubResource("Animation_i3pqv"),
+&"serca": SubResource("Animation_hqtel")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_onrkg"]
+radius = 8.121871
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hqtel"]
+radius = 5.2809353
+
+[node name="player" type="CharacterBody3D" unique_id=1580555560]
+script = ExtResource("1_4flbx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1434906238]
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_sh265")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=71837539]
+shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1933298666]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.25)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=444412477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.40773195, -0.91094327)
+light_energy = 2.6
+omni_range = 5.3488784
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1752992119]
+transform = Transform3D(0.345, 0, 0, 0, 0.6699164, 0, 0, 0, 0.329, 0.985, -0.88990104, -1.0111048)
+mesh = SubResource("CylinderMesh_4flbx")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1693618489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.14253452)
+target_position = Vector3(0, 0, -2)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D" unique_id=1096636390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7194911, -0.31188726, -1.0600419)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1496581673]
+libraries/ = SubResource("AnimationLibrary_hqtel")
+
+[node name="sonudos" type="Node3D" parent="." unique_id=792166305]
+
+[node name="paso" type="AudioStreamPlayer" parent="sonudos" unique_id=1690843267]
+pitch_scale = 2.73
+
+[node name="interazone" type="Area3D" parent="." unique_id=737576282]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interazone" unique_id=236339793]
+shape = SubResource("SphereShape3D_onrkg")
+
+[node name="lusdetect" type="Area3D" parent="." unique_id=1626435012]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lusdetect" unique_id=618863874]
+shape = SubResource("SphereShape3D_hqtel")
+debug_color = Color(0.7252904, 0.47644013, 0, 0.42)
+
+[connection signal="body_entered" from="interazone" to="." method="_on_interazone_body_entered"]
+[connection signal="body_exited" from="interazone" to="." method="_on_interazone_body_exited"]
+[connection signal="body_entered" from="lusdetect" to="." method="_on_lusdetect_body_entered"]
+[connection signal="body_exited" from="lusdetect" to="." method="_on_lusdetect_body_exited"]

@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dad6os626kjt6"]
+
+[ext_resource type="Script" uid="uid://cfrko7ts43wlh" path="res://static_body_3d.gd" id="1_1o80a"]
+[ext_resource type="Texture2D" uid="uid://beydoarawqnjf" path="res://Sprite /piesa_puntodeinteres.png" id="2_a0cdp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_a0cdp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4370k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lf5m6"]
+size = Vector3(0.44970703, 1, 1.057312)
+
+[sub_resource type="Animation" id="Animation_abce8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.7766715, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pdclx"]
+resource_name = "desplay"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.9337512, 0, 0), Vector3(-0.7592182, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ijpv8"]
+resource_name = "play"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7766715, 0, 0), Vector3(0.93375117, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qrar3"]
+_data = {
+&"RESET": SubResource("Animation_abce8"),
+&"desplay": SubResource("Animation_pdclx"),
+&"play": SubResource("Animation_ijpv8")
+}
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1401758132 groups=["inter"]]
+script = ExtResource("1_1o80a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=293148732]
+transform = Transform3D(0.47476423, 0, 0, 0, 0.15469718, 0, 0, 0, 1.3449843, 0, 0, 0)
+mesh = SubResource("BoxMesh_a0cdp")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1774265849]
+transform = Transform3D(1, 0, 0, 0, 0.71325046, 0.70090926, 0, -0.70090926, 0.71325046, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=469966596]
+transform = Transform3D(0.18616694, 0, 0, 0, 0.7723751, 0, 0, 0, 0.2035248, 0, 0.3945644, 0)
+mesh = SubResource("BoxMesh_4370k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=321628915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006370783, 0.37070084, 0.08040786)
+shape = SubResource("BoxShape3D_lf5m6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1232855584]
+libraries/ = SubResource("AnimationLibrary_qrar3")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=295212229]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.1362094, 0)
+billboard = 1
+texture = ExtResource("2_a0cdp")

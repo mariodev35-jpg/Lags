@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://030o1v3wg8fl"]
+
+[ext_resource type="Script" uid="uid://cfx37nnj6mihp" path="res://barradecarga.gd" id="1_dsaca"]
+[ext_resource type="Texture2D" uid="uid://bppopbo70c0yb" path="res://Sprite /piesa_barra1.png" id="1_q6u57"]
+[ext_resource type="Texture2D" uid="uid://bxquiu4d2iyk" path="res://Sprite /piesa_barra2.png" id="2_dsaca"]
+
+[sub_resource type="Gradient" id="Gradient_q6u57"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dsaca"]
+gradient = SubResource("Gradient_q6u57")
+width = 515
+height = 107
+
+[sub_resource type="Animation" id="Animation_peyak"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.677]
+}
+
+[sub_resource type="Animation" id="Animation_oqngo"]
+resource_name = "load"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.677, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jwgm0"]
+_data = {
+&"RESET": SubResource("Animation_peyak"),
+&"load": SubResource("Animation_oqngo")
+}
+
+[node name="Control" type="Control" unique_id=2132754868]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dsaca")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=169084196]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1994866995]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -96.0
+offset_right = 384.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("1_q6u57")
+texture_over = ExtResource("2_dsaca")
+texture_progress = SubResource("GradientTexture2D_dsaca")
+texture_progress_offset = Vector2(120, 55)
+
+[node name="Label" type="Label" parent="." unique_id=603284149]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -212.0
+offset_right = 196.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 65
+text = "cargando. . . ."
+visible_characters = 10
+visible_ratio = 0.677
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=52676466]
+libraries/ = SubResource("AnimationLibrary_jwgm0")

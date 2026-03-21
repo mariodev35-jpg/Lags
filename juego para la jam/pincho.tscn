@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://7lrd6j1jqlxh"]
+
+[ext_resource type="Script" uid="uid://c2essbxkh4rc" path="res://pincho.gd" id="1_720oy"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_l5h58"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_720oy"]
+size = Vector3(0.32983398, 1, 1)
+
+[node name="pincho" type="Area3D" unique_id=1826816835]
+script = ExtResource("1_720oy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=389348525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.38586015, 0, 0, 0)
+mesh = SubResource("PrismMesh_l5h58")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2075167351]
+transform = Transform3D(1, 0, 0, 0, 0.4809134, 0, 0, 0, 0.50757945, -0.0052490234, -0.16767213, 0)
+shape = SubResource("BoxShape3D_720oy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://squ400ecovdp"]
+
+[ext_resource type="Script" uid="uid://d0f04nlmaxod1" path="res://farole.gd" id="1_m25s7"]
+[ext_resource type="AudioStream" uid="uid://by3y7hu5b1fip" path="res://Efectos de sonidos /Ambiente /encendido fuego.ogg" id="2_v2p15"]
+[ext_resource type="Texture2D" uid="uid://dxeodcdvve6ub" path="res://Sprite /piesa_icono_luz1.png" id="3_7ka3t"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ljvjc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_m25s7"]
+height = 2.1855469
+radius = 0.21484375
+
+[node name="farola" type="StaticBody3D" unique_id=1870643421]
+script = ExtResource("1_m25s7")
+metadata/_custom_type_script = "uid://ssbrhor7yy2x"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=184152556 groups=["lus"]]
+transform = Transform3D(0.35258815, 0, 0, 0, 1.1370305, 0, 0, 0, 0.45600998, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ljvjc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=272012500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017840505, 0)
+shape = SubResource("CylinderShape3D_m25s7")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=867860769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3751545, 0)
+light_energy = 3.032
+omni_range = 10.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1284598350]
+stream = ExtResource("2_v2p15")
+pitch_scale = 1.5
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1276866531]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.8214072, 0)
+billboard = 1
+texture = ExtResource("3_7ka3t")

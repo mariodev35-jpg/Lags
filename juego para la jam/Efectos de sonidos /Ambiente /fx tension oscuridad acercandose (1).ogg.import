@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://w0vlr774pdb"
+path="res://.godot/imported/fx tension oscuridad acercandose (1).ogg-15c40422abdba4a59010b7e5acc5237c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose (1).ogg"
+dest_files=["res://.godot/imported/fx tension oscuridad acercandose (1).ogg-15c40422abdba4a59010b7e5acc5237c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

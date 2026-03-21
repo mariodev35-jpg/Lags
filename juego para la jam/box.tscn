@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cnuvi1dakx7nm"]
+
+[ext_resource type="Script" uid="uid://dch4rgwkq75yy" path="res://box.gd" id="1_g2tbl"]
+[ext_resource type="Texture2D" uid="uid://beydoarawqnjf" path="res://Sprite /piesa_puntodeinteres.png" id="2_oq5cr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oyhfb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2tbl"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="box" type="RigidBody3D" unique_id=581708404 groups=["agarrable", "inter"]]
+lock_rotation = true
+script = ExtResource("1_g2tbl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=921922840]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_oyhfb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=999788862]
+shape = SubResource("BoxShape3D_g2tbl")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=740375506]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.6066867, 0)
+billboard = 1
+texture = ExtResource("2_oq5cr")

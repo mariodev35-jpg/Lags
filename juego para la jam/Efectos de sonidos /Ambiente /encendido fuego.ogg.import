@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://by3y7hu5b1fip"
+path="res://.godot/imported/encendido fuego.ogg-8262e029144ecc1d402160d7cfdc44ad.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de sonidos /Ambiente /encendido fuego.ogg"
+dest_files=["res://.godot/imported/encendido fuego.ogg-8262e029144ecc1d402160d7cfdc44ad.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

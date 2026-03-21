@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnmvkmu0x43vp"
+path="res://.godot/imported/aterrizaje pasto.ogg-45fad2c18c455ecb03e426d2aa7e7cfd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de sonidos /Cesped/aterrizaje pasto.ogg"
+dest_files=["res://.godot/imported/aterrizaje pasto.ogg-45fad2c18c455ecb03e426d2aa7e7cfd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

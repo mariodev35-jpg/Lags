@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tfq14jv3ym12"
+path="res://.godot/imported/fx viento oscuro (1).ogg-e98ef07aa5d51de045b6f3393115611e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de sonidos /Ambiente /fx viento oscuro (1).ogg"
+dest_files=["res://.godot/imported/fx viento oscuro (1).ogg-e98ef07aa5d51de045b6f3393115611e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

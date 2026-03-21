@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bp7c2p0nbgdb7"
+path="res://.godot/imported/encendido y crepitar.ogg-34549f17e8fdb4e552aaee08e3d6f7a1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de sonidos /Ambiente /encendido y crepitar.ogg"
+dest_files=["res://.godot/imported/encendido y crepitar.ogg-34549f17e8fdb4e552aaee08e3d6f7a1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

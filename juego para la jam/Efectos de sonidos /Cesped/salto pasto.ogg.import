@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfcvc2bbp6ls1"
+path="res://.godot/imported/salto pasto.ogg-b318c9d9476dfb6518594c5ed2f411cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Efectos de sonidos /Cesped/salto pasto.ogg"
+dest_files=["res://.godot/imported/salto pasto.ogg-b318c9d9476dfb6518594c5ed2f411cd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

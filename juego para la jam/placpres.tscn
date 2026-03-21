@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cjiyu2w87r7s5"]
+
+[ext_resource type="Script" uid="uid://bvxhrgv8h2crr" path="res://placpres.gd" id="1_cgvcs"]
+[ext_resource type="Texture2D" uid="uid://beydoarawqnjf" path="res://Sprite /piesa_puntodeinteres.png" id="2_vsscn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qg4hb"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cgvcs"]
+
+[sub_resource type="Animation" id="Animation_vsscn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5827696, 0.12817979, 1.6300745)]
+}
+
+[sub_resource type="Animation" id="Animation_htye8"]
+resource_name = "despres"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5827696, 0.15907644, 1.6300745)]
+}
+
+[sub_resource type="Animation" id="Animation_1igpp"]
+resource_name = "pres"
+length = 1.4333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5827696, 0.04008973, 1.6300745)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4ato"]
+_data = {
+&"RESET": SubResource("Animation_vsscn"),
+&"despres": SubResource("Animation_htye8"),
+&"pres": SubResource("Animation_1igpp")
+}
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qg4hb"]
+height = 0.29052734
+radius = 0.80908203
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cgvcs"]
+size = Vector3(1.8386487, 0.13514233, 1.7026098)
+
+[node name="Area3D" type="StaticBody3D" unique_id=1091922822 groups=["inter"]]
+script = ExtResource("1_cgvcs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=546250691]
+transform = Transform3D(1.8386487, 0, 0, 0, 0.13514233, 0, 0, 0, 1.7026098, 0, 0, 0)
+mesh = SubResource("BoxMesh_qg4hb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=933681419]
+transform = Transform3D(1.5827696, 0, 0, 0, 0.12817979, 0, 0, 0, 1.6300745, 0, 0.12703109, 0)
+mesh = SubResource("CylinderMesh_cgvcs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1207850475]
+libraries/ = SubResource("AnimationLibrary_y4ato")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2055770083]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.8712764, 0)
+billboard = 1
+texture = ExtResource("2_vsscn")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=881376687]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=556256520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12768555, 0)
+shape = SubResource("CylinderShape3D_qg4hb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1216625160]
+shape = SubResource("BoxShape3D_cgvcs")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

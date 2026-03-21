@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d3db1ecasv2nv"]
+
+[ext_resource type="Script" uid="uid://b8ofys6nq5ujg" path="res://door.gd" id="1_ba8gm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hun61"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ba8gm"]
+
+[sub_resource type="Animation" id="Animation_ba8gm"]
+resource_name = "open"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v6xrn"]
+_data = {
+&"open": SubResource("Animation_ba8gm")
+}
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" unique_id=1450332812]
+script = ExtResource("1_ba8gm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1581118574]
+transform = Transform3D(1.6670827, 0, 0, 0, 2.4961874, 0, 0, 0, 0.26421946, 0, 0, 0)
+mesh = SubResource("BoxMesh_hun61")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2104153548]
+transform = Transform3D(1.6670827, 0, 0, 0, 2.4961874, 0, 0, 0, 0.26421946, 0, 0, 0)
+shape = SubResource("BoxShape3D_ba8gm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=727199397]
+libraries/ = SubResource("AnimationLibrary_v6xrn")

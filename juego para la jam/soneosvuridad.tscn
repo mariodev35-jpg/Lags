@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://l0row73jj3ui"]
+
+[ext_resource type="Script" uid="uid://d4noc3wd52ro8" path="res://soneosvuridad.gd" id="1_t777f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4y32"]
+albedo_color = Color(0.033678614, 0.10404203, 0.027900573, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_y4y32"]
+radius = 0.005
+height = 0.014
+
+[node name="CPUParticles3D" type="CPUParticles3D" unique_id=2119592030]
+material_override = SubResource("StandardMaterial3D_y4y32")
+amount = 71
+mesh = SubResource("SphereMesh_y4y32")
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 2.62
+initial_velocity_max = 25.27
+angular_velocity_min = -10.0
+angular_velocity_max = 11.26
+linear_accel_min = -4.47
+linear_accel_max = 8.18
+color = Color(1, 0, 0, 1)
+script = ExtResource("1_t777f")

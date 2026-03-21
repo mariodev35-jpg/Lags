@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmaui8vh2x20n"]
+
+[ext_resource type="Script" uid="uid://8wdokvkv7r07" path="res://oscul.gd" id="1_r7kt0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ll5y4"]
+size = Vector3(44.760635, 9.10511, 27.404846)
+
+[node name="Area3D" type="Area3D" unique_id=991904245]
+script = ExtResource("1_r7kt0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=901691573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09899902, 0.76556396, -0.14331055)
+shape = SubResource("BoxShape3D_ll5y4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
