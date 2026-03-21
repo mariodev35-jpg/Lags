@@ -10,12 +10,13 @@ var sens = 0.2
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 func _input(event: InputEvent) -> void:
-	if event is InputEventScreenDrag and event.position.x >= 620 :
+	if event is InputEventScreenDrag and event.position.x >= 620 or event is InputEventMouseMotion :
 		cam.rotate_x(deg_to_rad(-event.relative.y* sens))
 		#$PhantomCamera3D.horizontal_rotation_offset(deg_to_rad(-event.relative.x * sens))
 		rotate_y(deg_to_rad(-event.relative.x * sens))
 		cam.rotation.x = clamp(cam.rotation.x,deg_to_rad(-45),deg_to_rad(30))
 func _process(delta: float) -> void:
+	Input.mouse_mode  = Input.MOUSE_MODE_CAPTURED
 	if $Camera3D/RayCast3D.is_colliding():
 		var obj = $Camera3D/RayCast3D.get_collider()
 		box = obj

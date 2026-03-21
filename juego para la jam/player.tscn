@@ -288,6 +288,8 @@ shape = SubResource("SphereShape3D_onrkg")
 shape = SubResource("SphereShape3D_hqtel")
 debug_color = Color(0.7252904, 0.47644013, 0, 0.42)
 
+[node name="pos" type="Marker3D" parent="." unique_id=1864681865]
+
 [connection signal="body_entered" from="interazone" to="." method="_on_interazone_body_entered"]
 [connection signal="body_exited" from="interazone" to="." method="_on_interazone_body_exited"]
 [connection signal="body_entered" from="lusdetect" to="." method="_on_lusdetect_body_entered"]

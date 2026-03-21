@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cnuvi1dakx7nm" path="res://box.tscn" id="8_3lcsn"]
 [ext_resource type="AudioStream" uid="uid://tfq14jv3ym12" path="res://Efectos de sonidos /Ambiente /fx viento oscuro (1).ogg" id="8_lfatq"]
 [ext_resource type="PackedScene" uid="uid://cjiyu2w87r7s5" path="res://placpres.tscn" id="9_3lcsn"]
-[ext_resource type="PackedScene" uid="uid://l0row73jj3ui" path="res://soneosvuridad.tscn" id="10_h1k2n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w4i62"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -31,7 +30,6 @@ ssr_enabled = true
 environment = SubResource("Environment_dm5wp")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2068830477]
-visible = false
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=265738592]
@@ -120,9 +118,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3157017, 1.4394658, 3.14465
 
 [node name="Area3D2" parent="." unique_id=1242632909 instance=ExtResource("9_3lcsn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4587109, 4.9905033)
-
-[node name="CPUParticles3D" parent="." unique_id=2119592030 node_paths=PackedStringArray("player") instance=ExtResource("10_h1k2n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9529948, 0.23932207)
-player = NodePath("../player")
 
 [editable path="Area3D"]
