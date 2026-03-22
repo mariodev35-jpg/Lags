@@ -12,7 +12,7 @@
 [node name="Node3D" type="Node3D" unique_id=1959826314]
 
 [node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_ibjaa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.394144, 1.0984789, 38.38978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.673512, 9.07291, -29.170872)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=136674342]
 stream = ExtResource("3_flm4b")
@@ -34,7 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.150917, 4.0894494, -19.728
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.532089, 7.645827, 16.741354)
 
 [node name="AnimatableBody3D" parent="." unique_id=1450332812 instance=ExtResource("6_na4y3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.831288, 8.02181, 2.684073)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0291395, 8.02181, 2.244225)
 
 [node name="MeshInstance3D" parent="AnimatableBody3D" index="0" unique_id=1581118574]
 transform = Transform3D(9.988822, 0, 0, 0, 3.6175938, 0, 0, 0, 0.26421946, -0.84970665, 0.26746368, -0.4850874)
