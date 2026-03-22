@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dkqft73ua0yj"]
+
+[ext_resource type="Script" uid="uid://782fbac1sdi5" path="res://menu.gd" id="1_lti8b"]
+
+[sub_resource type="SystemFont" id="SystemFont_vsb4k"]
+font_names = PackedStringArray("Sans-Serif")
+
+[sub_resource type="Theme" id="Theme_lti8b"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/font_sizes/font_size = 61
+Button/fonts/font = null
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 68
+Label/fonts/font = SubResource("SystemFont_vsb4k")
+
+[sub_resource type="Gradient" id="Gradient_vsb4k"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lti8b"]
+gradient = SubResource("Gradient_vsb4k")
+fill = 1
+fill_from = Vector2(0.49655172, 0.53103447)
+fill_to = Vector2(0.8206897, 0.19631201)
+
+[node name="Control" type="Control" unique_id=1591027318]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lti8b")
+script = ExtResource("1_lti8b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1794097998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_lti8b")
+
+[node name="btnplay" type="Button" parent="." unique_id=164091606]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.5
+offset_top = -15.5
+offset_right = 20.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "play"
+
+[node name="btnconfi" type="Button" parent="." unique_id=838922988]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 383.0
+offset_right = 700.0
+offset_bottom = 475.0
+text = "ajustes"
+
+[node name="btnexit" type="Button" parent="." unique_id=1791096954]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 502.0
+offset_right = 621.0
+offset_bottom = 594.0
+text = "exit
+"
+
+[node name="Label" type="Label" parent="." unique_id=231275595]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 120.0
+offset_right = 901.0
+offset_bottom = 201.0
+text = "ecos de las sombras "
+
+[connection signal="pressed" from="btnplay" to="." method="_on_btnplay_pressed"]
+[connection signal="pressed" from="btnconfi" to="." method="_on_btnconfi_pressed"]
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]

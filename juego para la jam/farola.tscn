@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://ssbrhor7yy2x"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=184152556]
 transform = Transform3D(0.35258815, 0, 0, 0, 1.1370305, 0, 0, 0, 0.45600998, 0, 0, 0)
+ignore_occlusion_culling = true
 mesh = SubResource("CylinderMesh_ljvjc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=272012500]

@@ -11,7 +11,9 @@ height = 0.014
 
 [node name="CPUParticles3D" type="CPUParticles3D" unique_id=2119592030]
 material_override = SubResource("StandardMaterial3D_y4y32")
-amount = 71
+amount = 70
+preprocess = 4.1
+randomness = 1.0
 mesh = SubResource("SphereMesh_y4y32")
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)

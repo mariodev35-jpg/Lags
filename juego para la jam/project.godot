@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="juego para la jam"
-run/main_scene="uid://030o1v3wg8fl"
+run/main_scene="uid://dkqft73ua0yj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://c2kqtoihuk3b4"
 
 [autoload]
 
@@ -24,6 +28,7 @@ Global="*uid://dxj6y43a8yb18"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
@@ -81,3 +86,4 @@ use={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+occlusion_culling/use_occlusion_culling=true
