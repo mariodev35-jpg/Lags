@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://sqbqey3p10ue"]
+
+[ext_resource type="PackedScene" uid="uid://54ht7ro8oybc" path="res://Modelos/Mapa1Jam.glb" id="1_p84jh"]
+[ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_ibjaa"]
+[ext_resource type="AudioStream" uid="uid://tfq14jv3ym12" path="res://Efectos de sonidos /Ambiente /fx viento oscuro (1).ogg" id="3_flm4b"]
+[ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="4_bwbs4"]
+[ext_resource type="PackedScene" uid="uid://squ400ecovdp" path="res://farola.tscn" id="5_bwbs4"]
+
+[node name="Node3D" type="Node3D" unique_id=1959826314]
+
+[node name="Mapa1Jam" parent="." unique_id=305851022 instance=ExtResource("1_p84jh")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_ibjaa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.394144, 1.0984789, 38.38978)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=136674342]
+stream = ExtResource("3_flm4b")
+volume_db = -2.0
+autoplay = true
+
+[node name="CanvasLayer" parent="." unique_id=1289846114 instance=ExtResource("4_bwbs4")]
+
+[node name="farola" parent="." unique_id=1870643421 instance=ExtResource("5_bwbs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.351473, 1.0214887, 5.976281)
+
+[node name="farola2" parent="." unique_id=372758944 instance=ExtResource("5_bwbs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.449006, 4.0894494, -33.001194)
+
+[node name="farola3" parent="." unique_id=1482170674 instance=ExtResource("5_bwbs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.150917, 4.0894494, -19.728838)
+
+[node name="farola4" parent="." unique_id=1613573890 instance=ExtResource("5_bwbs4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.532089, 7.645827, 16.741354)

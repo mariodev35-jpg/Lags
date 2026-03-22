@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crpualumjwf"]
 
 [ext_resource type="Script" uid="uid://dijixc4hxkwbb" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Environment" uid="uid://cdjngkemop1lo" path="res://envirome.tres" id="2_dw050"]
 [ext_resource type="AudioStream" uid="uid://cyqsw8nemwjs7" path="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose.ogg" id="2_hqtel"]
 [ext_resource type="AudioStream" uid="uid://w0vlr774pdb" path="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose (1).ogg" id="3_sweqy"]
 [ext_resource type="AudioStream" uid="uid://cyaiqwe46m3av" path="res://Efectos de sonidos /Ambiente /fx expansion de la sombre.ogg" id="4_2hs0m"]
@@ -379,6 +380,7 @@ shape = SubResource("CapsuleShape3D_4flbx")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1933298666]
 physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.245)
+environment = ExtResource("2_dw050")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=444412477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.40773195, -0.91094327)
@@ -403,9 +405,11 @@ libraries/ = SubResource("AnimationLibrary_hqtel")
 
 [node name="paso" type="AudioStreamPlayer" parent="sonudos" unique_id=1690843267]
 pitch_scale = 2.73
+bus = &"efectssounds"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sonudos" unique_id=1454781533]
 volume_db = -1.713
+bus = &"efectssounds"
 
 [node name="interazone" type="Area3D" parent="." unique_id=737576282]
 

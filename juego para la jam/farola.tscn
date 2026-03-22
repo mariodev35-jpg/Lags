@@ -10,11 +10,11 @@
 height = 2.1855469
 radius = 0.21484375
 
-[node name="farola" type="StaticBody3D" unique_id=1870643421]
+[node name="farola" type="StaticBody3D" unique_id=1870643421 groups=["inter", "lus"]]
 script = ExtResource("1_m25s7")
 metadata/_custom_type_script = "uid://ssbrhor7yy2x"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=184152556 groups=["lus"]]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=184152556]
 transform = Transform3D(0.35258815, 0, 0, 0, 1.1370305, 0, 0, 0, 0.45600998, 0, 0, 0)
 mesh = SubResource("CylinderMesh_ljvjc")
 
@@ -30,6 +30,7 @@ omni_range = 10.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1284598350]
 stream = ExtResource("2_v2p15")
 pitch_scale = 1.5
+bus = &"efectssounds"
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1276866531]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.8214072, 0)
