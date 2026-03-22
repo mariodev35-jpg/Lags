@@ -1,8 +1,10 @@
 extends CharacterBody3D
+
 var alumbra = false
 var agar = false
 var cantcoji = 0
 var box 
+var fall = false
 @export var  lus = 100
 @export var spawn_pos : Marker3D
 @onready var cam = $Camera3D
@@ -16,6 +18,8 @@ func _input(event: InputEvent) -> void:
 		rotate_y(deg_to_rad(-event.relative.x * sens))
 		cam.rotation.x = clamp(cam.rotation.x,deg_to_rad(-45),deg_to_rad(30))
 func _process(delta: float) -> void:
+	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	Input.mouse_mode  = Input.MOUSE_MODE_CAPTURED
 	if $Camera3D/RayCast3D.is_colliding():
 		var obj = $Camera3D/RayCast3D.get_collider()
@@ -39,14 +43,21 @@ func _process(delta: float) -> void:
 		elif box.is_in_group("agarrable") and agar == false:
 			box.soltar()
 			$Camera3D/RayCast3D.enabled = true
+	if direction and is_on_floor():
+		$AnimationPlayer2.play("run")
+		$sonudos/AudioStreamPlayer.pitch_scale = randf_range(1,3)
+	elif !direction and is_on_floor() and $suelodetect.body_entered:
+		$AnimationPlayer2.play("idle")
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		$AnimationPlayer2.play("jump")
+		$sonudos/AudioStreamPlayer.pitch_scale = 1
 	Global.lus = $Camera3D/OmniLight3D.omni_range 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -63,7 +74,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	if direction:
-		#$sonudos/paso.play()
+		#$sonudos/paso.play()s
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
@@ -89,7 +100,7 @@ func _on_interazone_body_exited(body: Node3D) -> void:
 		$AnimationPlayer.play("ilu")
 		body.invisi()
 #endregion
-
+	
 #region detecta si hay una fuente de lus cerca
 func _on_lusdetect_body_entered(body: Node3D) -> void:
 	if body.is_in_group("lus") and body.encendido == true :
@@ -98,3 +109,8 @@ func _on_lusdetect_body_exited(body: Node3D) -> void:
 	if body.is_in_group("lus") and body.encendido == true:
 		alumbra = false
 #endregion
+
+
+func _on_suelodetect_body_entered(body: Node3D) -> void:
+	if not  velocity.y >= 0:
+		$AnimationPlayer2.play("fall")

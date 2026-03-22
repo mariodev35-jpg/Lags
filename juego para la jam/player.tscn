@@ -4,6 +4,9 @@
 [ext_resource type="AudioStream" uid="uid://cyqsw8nemwjs7" path="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose.ogg" id="2_hqtel"]
 [ext_resource type="AudioStream" uid="uid://w0vlr774pdb" path="res://Efectos de sonidos /Ambiente /fx tension oscuridad acercandose (1).ogg" id="3_sweqy"]
 [ext_resource type="AudioStream" uid="uid://cyaiqwe46m3av" path="res://Efectos de sonidos /Ambiente /fx expansion de la sombre.ogg" id="4_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://cnmvkmu0x43vp" path="res://Efectos de sonidos /Cesped/aterrizaje pasto.ogg" id="5_1jxqw"]
+[ext_resource type="AudioStream" uid="uid://dfcvc2bbp6ls1" path="res://Efectos de sonidos /Cesped/salto pasto.ogg" id="5_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://5hbu8dtn7ofc" path="res://Efectos de sonidos /Cesped/2  pasos pasto.ogg" id="6_1jxqw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
 
@@ -239,6 +242,130 @@ radius = 8.121871
 [sub_resource type="SphereShape3D" id="SphereShape3D_hqtel"]
 radius = 5.2809353
 
+[sub_resource type="Animation" id="Animation_1jxqw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.68, -0.245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n7ghd"]
+resource_name = "fall"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sonudos/AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_1jxqw")
+}],
+"times": PackedFloat32Array(0.099999994)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="Animation_2hs0m"]
+resource_name = "idle"
+loop_mode = 1
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 2,
+"values": [Vector3(0, 0.68, -0.245), Vector3(0, 0.81, -0.245), Vector3(0, 0.68, -0.245)]
+}
+
+[sub_resource type="Animation" id="Animation_dw050"]
+resource_name = "jump"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sonudos/AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_2hs0m")
+}],
+"times": PackedFloat32Array(0.06666667)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="Animation" id="Animation_b26j0"]
+resource_name = "run"
+length = 0.54
+loop_mode = 1
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sonudos/AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_1jxqw")
+}],
+"times": PackedFloat32Array(0.16666669)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.29, 0.54),
+"transitions": PackedFloat32Array(1, 0.99999994, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.022689281), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n7ghd"]
+_data = {
+&"RESET": SubResource("Animation_1jxqw"),
+&"fall": SubResource("Animation_n7ghd"),
+&"idle": SubResource("Animation_2hs0m"),
+&"jump": SubResource("Animation_dw050"),
+&"run": SubResource("Animation_b26j0")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1jxqw"]
+size = Vector3(0.1, 0.1, 0.1)
+
 [node name="player" type="CharacterBody3D" unique_id=1580555560]
 script = ExtResource("1_4flbx")
 
@@ -251,7 +378,7 @@ shape = SubResource("CapsuleShape3D_4flbx")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1933298666]
 physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.245)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=444412477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.40773195, -0.91094327)
@@ -277,6 +404,9 @@ libraries/ = SubResource("AnimationLibrary_hqtel")
 [node name="paso" type="AudioStreamPlayer" parent="sonudos" unique_id=1690843267]
 pitch_scale = 2.73
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="sonudos" unique_id=1454781533]
+volume_db = -1.713
+
 [node name="interazone" type="Area3D" parent="." unique_id=737576282]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="interazone" unique_id=236339793]
@@ -290,7 +420,18 @@ debug_color = Color(0.7252904, 0.47644013, 0, 0.42)
 
 [node name="pos" type="Marker3D" parent="." unique_id=1864681865]
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=442828735]
+libraries/ = SubResource("AnimationLibrary_n7ghd")
+
+[node name="suelodetect" type="Area3D" parent="." unique_id=1986160291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9192454, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="suelodetect" unique_id=2092121451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14948457, 0.0057974164)
+shape = SubResource("BoxShape3D_1jxqw")
+
 [connection signal="body_entered" from="interazone" to="." method="_on_interazone_body_entered"]
 [connection signal="body_exited" from="interazone" to="." method="_on_interazone_body_exited"]
 [connection signal="body_entered" from="lusdetect" to="." method="_on_lusdetect_body_entered"]
 [connection signal="body_exited" from="lusdetect" to="." method="_on_lusdetect_body_exited"]
+[connection signal="body_entered" from="suelodetect" to="." method="_on_suelodetect_body_entered"]
