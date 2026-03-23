@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bil2xo6hs8ayo"
-path.s3tc="res://.godot/imported/Piedras-pixel_PiedraPixel.png-85b40bb94f6407e90a147d4225957038.s3tc.ctex"
+uid="uid://cwxjv0nvl8e8j"
+path.s3tc="res://.godot/imported/Mapa1Jam_PiedraPixel.png-c66efaaf727e23846b636342b92c6963.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Modelos/Piedras-pixel_PiedraPixel.png"
-dest_files=["res://.godot/imported/Piedras-pixel_PiedraPixel.png-85b40bb94f6407e90a147d4225957038.s3tc.ctex"]
+source_file="res://Modelos/Mapa1Jam_PiedraPixel.png"
+dest_files=["res://.godot/imported/Mapa1Jam_PiedraPixel.png-c66efaaf727e23846b636342b92c6963.s3tc.ctex"]
 
 [params]
 
