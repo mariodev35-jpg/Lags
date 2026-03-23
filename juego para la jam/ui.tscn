@@ -5,8 +5,53 @@
 [ext_resource type="Texture2D" uid="uid://b6s6dkhvwlvas" path="res://icon.svg" id="2_27fn8"]
 [ext_resource type="Texture2D" uid="uid://dpbnc7xuset4i" path="res://Sprite /piesa_interaccion.png" id="4_nltto"]
 
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_nltto"]
+parameter_name = "Texture2DParameter"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_ibotj"]
+expanded_output_ports = [0]
+source = 5
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_n5ude"]
+parameter_name = "FloatParameter"
+hint = 1
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_y4yjw"]
+operator = 2
+
+[sub_resource type="VisualShader" id="VisualShader_waa4j"]
+mode = 1
+flags/light_only = false
+nodes/vertex/0/position = Vector2(626, 102)
+nodes/fragment/0/position = Vector2(789.46234, 175.52078)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture2DParameter_nltto")
+nodes/fragment/3/position = Vector2(-512.96515, 538.7322)
+nodes/fragment/4/node = SubResource("VisualShaderNodeTexture_ibotj")
+nodes/fragment/4/position = Vector2(172.50519, 379.54477)
+nodes/fragment/5/node = SubResource("VisualShaderNodeFloatParameter_n5ude")
+nodes/fragment/5/position = Vector2(9.200897, 116.85617)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatOp_y4yjw")
+nodes/fragment/6/position = Vector2(570.2009, 244.35611)
+nodes/fragment/connections = PackedInt32Array(3, 0, 4, 2, 5, 0, 6, 0, 6, 0, 0, 1, 4, 0, 6, 1)
+
+[sub_resource type="Gradient" id="Gradient_ok7cu"]
+offsets = PackedFloat32Array(0.789916, 1)
+colors = PackedColorArray(0.021434637, 0.021434635, 0.021434633, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_irxef"]
+gradient = SubResource("Gradient_ok7cu")
+fill = 1
+fill_from = Vector2(0.49101797, 0.49101797)
+fill_to = Vector2(0.9954128, 0.33027524)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e2l4f"]
+shader = SubResource("VisualShader_waa4j")
+shader_parameter/FloatParameter = 0.678000032205
+shader_parameter/Texture2DParameter = SubResource("GradientTexture2D_irxef")
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1289846114]
 script = ExtResource("1_27fn8")
+metadata/_edit_horizontal_guides_ = [324.0]
 
 [node name="Virtual Joystick" parent="." unique_id=1191086780 instance=ExtResource("1_m6e0p")]
 
@@ -56,3 +101,14 @@ offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "interactuar"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=901753798]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+material = SubResource("ShaderMaterial_e2l4f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

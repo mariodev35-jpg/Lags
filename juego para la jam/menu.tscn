@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dkqft73ua0yj"]
 
 [ext_resource type="Script" uid="uid://782fbac1sdi5" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://cygtaoaxpdguv" path="res://Sprite /piesas_boton.png" id="2_ouk20"]
 
 [sub_resource type="SystemFont" id="SystemFont_vsb4k"]
 font_names = PackedStringArray("Sans-Serif")
@@ -23,6 +24,11 @@ fill = 1
 fill_from = Vector2(0.49655172, 0.53103447)
 fill_to = Vector2(0.8206897, 0.19631201)
 
+[sub_resource type="Theme" id="Theme_ouk20"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mae5d"]
+load_path = "res://.godot/imported/piesas_boton.png-f920add6f0b5c09567489735b8d07959.ctex"
+
 [node name="Control" type="Control" unique_id=1591027318]
 layout_mode = 3
 anchors_preset = 15
@@ -42,37 +48,67 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_lti8b")
 
-[node name="btnplay" type="Button" parent="." unique_id=164091606]
+[node name="btnplay" type="TextureButton" parent="." unique_id=1615830583]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.5
-offset_top = -15.5
-offset_right = 20.5
-offset_bottom = 15.5
+offset_left = -190.0
+offset_top = -139.0
+offset_right = 98.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.83809644, 0.868472)
+theme = SubResource("Theme_ouk20")
+texture_normal = SubResource("CompressedTexture2D_mae5d")
+
+[node name="Label" type="Label" parent="btnplay" unique_id=553139435]
+layout_mode = 0
+offset_left = 89.48851
+offset_top = 49.51225
+offset_right = 212.48851
+offset_bottom = 130.51225
+rotation = -0.10858223
 text = "play"
 
-[node name="btnconfi" type="Button" parent="." unique_id=838922988]
+[node name="btnconfi" type="TextureButton" parent="." unique_id=2007790380]
 layout_mode = 0
-offset_left = 443.0
-offset_top = 383.0
-offset_right = 700.0
-offset_bottom = 475.0
-text = "ajustes"
+offset_left = 417.0
+offset_top = 316.0
+offset_right = 705.0
+offset_bottom = 508.0
+scale = Vector2(0.85369486, 0.8212053)
+texture_normal = ExtResource("2_ouk20")
 
-[node name="btnexit" type="Button" parent="." unique_id=1791096954]
+[node name="Label" type="Label" parent="btnconfi" unique_id=69499398]
 layout_mode = 0
-offset_left = 503.0
-offset_top = 502.0
-offset_right = 621.0
-offset_bottom = 594.0
-text = "exit
-"
+offset_left = 45.68376
+offset_top = 56.01522
+offset_right = 281.68378
+offset_bottom = 137.01523
+rotation = -0.09051258
+text = "ajustes "
+
+[node name="btnexit" type="TextureButton" parent="." unique_id=700013253]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 431.00003
+offset_right = 735.0
+offset_bottom = 623.0
+scale = Vector2(0.7755079, 0.8067868)
+texture_normal = ExtResource("2_ouk20")
+
+[node name="Label" type="Label" parent="btnexit" unique_id=936769627]
+layout_mode = 0
+offset_left = 99.28975
+offset_top = 54.537304
+offset_right = 222.28975
+offset_bottom = 135.53731
+rotation = -0.10810302
+text = "exit"
 
 [node name="Label" type="Label" parent="." unique_id=231275595]
 layout_mode = 0

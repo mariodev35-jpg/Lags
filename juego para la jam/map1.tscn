@@ -19,6 +19,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.997, 2.414, 33.052)
 stream = ExtResource("3_flm4b")
 volume_db = -2.0
 autoplay = true
+bus = &"musicafondo"
 
 [node name="CanvasLayer" parent="." unique_id=1289846114 instance=ExtResource("4_bwbs4")]
 
@@ -41,7 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0291395, 8.02181, 2.244225
 transform = Transform3D(9.988822, 0, 0, 0, 3.6175938, 0, 0, 0, 0.26421946, -0.84970665, 0.26746368, -0.4850874)
 
 [node name="CollisionShape3D" parent="AnimatableBody3D" index="1" unique_id=2104153548]
-transform = Transform3D(17.288881, 0, 0, 0, 2.4961874, 0, 0, 0, 0.26421946, 3.9223585, 0, 0)
+transform = Transform3D(17.288881, 0, 0, 0, 2.4961874, 0, 0, 0, 0.26421946, 3.0739546, 0.18320751, -0.52449226)
 
 [node name="StaticBody3D" parent="." unique_id=1401758132 node_paths=PackedStringArray("obje") instance=ExtResource("7_gtvy4")]
 transform = Transform3D(0.043131158, 0, -0.9990694, 0, 1, 0, 0.9990694, 0, 0.043131158, 49.49536, 3.2633915, -13.057102)
