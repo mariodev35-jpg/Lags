@@ -31,6 +31,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 window/vsync/vsync_mode=0
 
+[dotnet]
+
+project/assembly_name="juego para la jam"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
