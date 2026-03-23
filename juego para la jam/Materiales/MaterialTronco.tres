@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbrknxo1ydril"]
+
+[ext_resource type="Texture2D" uid="uid://gx8yxnxl6lot" path="res://Modelos/Arbol Pixel_ArbolCortezaPixel.png" id="1_etwk2"]
+
+[resource]
+resource_name = "MaterialTronco"
+cull_mode = 2
+albedo_texture = ExtResource("1_etwk2")
+uv1_scale = Vector3(5, 2, 1)
+uv1_offset = Vector3(0, -1, 0)

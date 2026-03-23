@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://biq5e6s63lkc"]
+
+[ext_resource type="Texture2D" uid="uid://vtb4vkomgo3j" path="res://Modelos/Arbol Pixel_HiervaPixel.png" id="1_vr6t2"]
+
+[resource]
+resource_name = "MaterialHojas"
+cull_mode = 2
+albedo_texture = ExtResource("1_vr6t2")
+albedo_texture_force_srgb = true

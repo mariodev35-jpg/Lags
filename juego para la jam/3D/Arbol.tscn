@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b2yrenw4v84wg"]
+
+[ext_resource type="PackedScene" uid="uid://byai6j8e2vt7b" path="res://Modelos/Arbol Pixel.glb" id="1_mjl00"]
+
+[node name="Arbol" type="Node3D" unique_id=991158630]
+
+[node name="Arbol Pixel" parent="." unique_id=459819919 instance=ExtResource("1_mjl00")]

@@ -1,0 +1,55 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://byai6j8e2vt7b"
+path="res://.godot/imported/Arbol Pixel.glb-ff495a45d24b9f0465a22ca6984fc1df.scn"
+
+[deps]
+
+source_file="res://Modelos/Arbol Pixel.glb"
+dest_files=["res://.godot/imported/Arbol Pixel.glb-ff495a45d24b9f0465a22ca6984fc1df.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"MaterialHojas": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialHojas.tres",
+"use_external/path": "uid://biq5e6s63lkc"
+},
+"MaterialTronco": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialTronco.tres",
+"use_external/path": "uid://cbrknxo1ydril"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
