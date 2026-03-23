@@ -355,7 +355,7 @@ shape = SubResource("CapsuleShape3D_4flbx")
 physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, -0.245)
 environment = ExtResource("2_dw050")
-far = 200.0
+far = 40.97
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=444412477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.40773195, -0.91094327)

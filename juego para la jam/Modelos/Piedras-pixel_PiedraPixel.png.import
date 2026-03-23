@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bil2xo6hs8ayo"
-path.s3tc="res://.godot/imported/Piedras-pixel_PiedraPixel.png-85b40bb94f6407e90a147d4225957038.s3tc.ctex"
+path.etc2="res://.godot/imported/Piedras-pixel_PiedraPixel.png-85b40bb94f6407e90a147d4225957038.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Modelos/Piedras-pixel_PiedraPixel.png"
-dest_files=["res://.godot/imported/Piedras-pixel_PiedraPixel.png-85b40bb94f6407e90a147d4225957038.s3tc.ctex"]
+dest_files=["res://.godot/imported/Piedras-pixel_PiedraPixel.png-85b40bb94f6407e90a147d4225957038.etc2.ctex"]
 
 [params]
 
