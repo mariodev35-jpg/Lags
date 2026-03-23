@@ -14,6 +14,7 @@ config/name="juego para la jam"
 run/main_scene="uid://dkqft73ua0yj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+config/tags=PackedStringArray("juego_para_la_jam")
 
 [audio]
 

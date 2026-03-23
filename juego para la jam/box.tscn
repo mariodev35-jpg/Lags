@@ -1,20 +1,33 @@
 [gd_scene format=3 uid="uid://cnuvi1dakx7nm"]
 
 [ext_resource type="Script" uid="uid://dch4rgwkq75yy" path="res://box.gd" id="1_g2tbl"]
+[ext_resource type="Texture2D" uid="uid://cw6y4vi7wudio" path="res://Sprite /tiles_caja2.png" id="2_bqn3j"]
 [ext_resource type="Texture2D" uid="uid://beydoarawqnjf" path="res://Sprite /piesa_puntodeinteres.png" id="2_oq5cr"]
+[ext_resource type="Texture2D" uid="uid://ct8ghs0inb57t" path="res://Sprite /tiles_caja1.png" id="4_3n43a"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_oyhfb"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3n43a"]
+transparency = 1
+albedo_texture = ExtResource("2_bqn3j")
+uv1_offset = Vector3(0.505, -0.475, -0.475)
+uv1_triplanar = true
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2tbl"]
 size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjbh2"]
+albedo_texture = ExtResource("4_3n43a")
+uv1_scale = Vector3(2, 2, 2)
 
 [node name="box" type="RigidBody3D" unique_id=581708404 groups=["agarrable", "inter"]]
 lock_rotation = true
 script = ExtResource("1_g2tbl")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=921922840]
+[node name="box1" type="MeshInstance3D" parent="." unique_id=921922840]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("BoxMesh_oyhfb")
+surface_material_override/0 = SubResource("StandardMaterial3D_3n43a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=999788862]
 shape = SubResource("BoxShape3D_g2tbl")
@@ -23,3 +36,8 @@ shape = SubResource("BoxShape3D_g2tbl")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.6066867, 0)
 billboard = 1
 texture = ExtResource("2_oq5cr")
+
+[node name="box2" type="MeshInstance3D" parent="." unique_id=1301668065]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_oyhfb")
+surface_material_override/0 = SubResource("StandardMaterial3D_jjbh2")
