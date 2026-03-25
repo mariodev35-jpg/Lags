@@ -27,14 +27,14 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("run") and running == true:
 		running = false
 	if running == true and direction and Global.runmode >= 0:
-		SPEED = 5.0
-		Global.runmode -= 1
+		SPEED =  7.0 
+		Global.runmode -= 5 *delta
 	elif running == true and !direction and Global.runmode <= 50 :
-		SPEED = 7.0
-		Global.runmode += 1
+		SPEED =5.0
+		Global.runmode += 5 * delta
 	elif running == false and Global.runmode <= 50:
 		SPEED =5.0
-		Global.runmode += 1
+		Global.runmode += 5 *delta
 	
 	Input.mouse_mode  = Input.MOUSE_MODE_CAPTURED
 	if $Camera3D/RayCast3D.is_colliding():

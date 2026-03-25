@@ -27,7 +27,7 @@ bus = &"musicafondo"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.351473, 1.0214887, 5.976281)
 
 [node name="farola2" parent="." unique_id=372758944 instance=ExtResource("5_bwbs4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.449006, 4.0894494, -33.001194)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.101517, 4.0894494, -33.001194)
 
 [node name="farola3" parent="." unique_id=1482170674 instance=ExtResource("5_bwbs4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.150917, 4.0894494, -19.728838)
