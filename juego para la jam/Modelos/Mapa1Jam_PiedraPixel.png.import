@@ -2,28 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bil2xo6hs8ayo"
-<<<<<<< Updated upstream
-path.etc2="res://.godot/imported/Mapa1Jam_PiedraPixel.png-c66efaaf727e23846b636342b92c6963.etc2.ctex"
-=======
+uid="uid://cwxjv0nvl8e8j"
 path.s3tc="res://.godot/imported/Mapa1Jam_PiedraPixel.png-c66efaaf727e23846b636342b92c6963.s3tc.ctex"
->>>>>>> Stashed changes
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "c4d5a165c871d745eb6e585556602f46"
 }
 
 [deps]
 
 source_file="res://Modelos/Mapa1Jam_PiedraPixel.png"
-<<<<<<< Updated upstream
-dest_files=["res://.godot/imported/Mapa1Jam_PiedraPixel.png-c66efaaf727e23846b636342b92c6963.etc2.ctex"]
-=======
 dest_files=["res://.godot/imported/Mapa1Jam_PiedraPixel.png-c66efaaf727e23846b636342b92c6963.s3tc.ctex"]
->>>>>>> Stashed changes
 
 [params]
 
