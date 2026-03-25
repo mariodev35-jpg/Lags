@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+var running = true
 var alumbra = false
 var agar = false
 var cantcoji = 0
@@ -9,17 +9,33 @@ var fall = false
 @export var spawn_pos : Marker3D
 @onready var cam = $Camera3D
 var sens = 0.2
-const SPEED = 5.0
+var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 func _input(event: InputEvent) -> void:
+	
 	if event is InputEventScreenDrag and event.position.x >= 620 or event is InputEventMouseMotion :
 		cam.rotate_x(deg_to_rad(-event.relative.y* sens))
 		#$PhantomCamera3D.horizontal_rotation_offset(deg_to_rad(-event.relative.x * sens))
 		rotate_y(deg_to_rad(-event.relative.x * sens))
 		cam.rotation.x = clamp(cam.rotation.x,deg_to_rad(-45),deg_to_rad(30))
 func _process(delta: float) -> void:
+	
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if Input.is_action_just_pressed("run") and running == false:
+		running = true
+	elif Input.is_action_just_pressed("run") and running == true:
+		running = false
+	if running == true and direction and Global.runmode >= 0:
+		SPEED = 5.0
+		Global.runmode -= 1
+	elif running == true and !direction and Global.runmode <= 50 :
+		SPEED = 7.0
+		Global.runmode += 1
+	elif running == false and Global.runmode <= 50:
+		SPEED =5.0
+		Global.runmode += 1
+	
 	Input.mouse_mode  = Input.MOUSE_MODE_CAPTURED
 	if $Camera3D/RayCast3D.is_colliding():
 		var obj = $Camera3D/RayCast3D.get_collider()

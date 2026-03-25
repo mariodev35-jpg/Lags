@@ -112,3 +112,19 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="ProgressBar2" type="ProgressBar" parent="." unique_id=1430101625]
+anchors_preset = -1
+anchor_right = 0.289
+offset_left = 354.0
+offset_top = 607.0
+offset_right = 448.072
+offset_bottom = 634.0
+max_value = 50.0
+value = 50.0
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="." unique_id=984036122]
+position = Vector2(936, 19)
+scale = Vector2(0.6501803, 0.639544)
+texture_normal = ExtResource("2_27fn8")
+action = "run"
