@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6fgulm8tdsg7"]
+
+[ext_resource type="Texture2D" uid="uid://c7v6rraaxnaag" path="res://Modelos/Mapa1Jam_PiedraOscuraPixel.png" id="1_fn6ng"]
+
+[resource]
+resource_name = "MaterialPisoPiedraOscura"
+cull_mode = 2
+albedo_texture = ExtResource("1_fn6ng")
+roughness = 0.5
+uv1_scale = Vector3(50, 50, 1)
+uv1_offset = Vector3(1.0999999, -50, 0)

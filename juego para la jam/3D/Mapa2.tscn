@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://up73arf2ep0s"]
+
+[ext_resource type="PackedScene" uid="uid://dtqanynnax4c4" path="res://Modelos/Mapa2Jam.glb" id="1_0lbwi"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ncphg"]
+points = PackedVector3Array(-0.9286635, -1.6846642, -5.946642, 0.8948095, -1.5773802, -4.0155277, 0.8948095, -1.6846642, -4.0155277, 0.8948095, -1.5773802, -5.946642, -0.9286635, -1.5773802, -4.0155277, -0.9286635, -1.6846642, -4.0155277, 0.8948095, -1.6846642, -5.946642, -0.9286635, -1.5773802, -5.946642)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tviyi"]
+points = PackedVector3Array(3.1479545, -3.1866417, -4.0155277, 0.89498806, -1.6849582, -5.946642, 0.89498806, -1.5775375, -5.946642, 0.88166755, -1.5680238, -4.0041103, 2.9333758, -2.8645372, -5.946642, 2.9333758, -3.1866417, -5.946642, 1.5387242, -2.2212737, -4.0155277, 1.4315451, -1.7922213, -4.0155277, 1.1095668, -1.5775375, -5.946642, 2.9333758, -2.8645372, -4.0155277, 2.9333758, -3.1866417, -4.0155277, 1.2169664, -2.0067475, -5.946642, 1.1095668, -1.8994844, -4.0155277, 3.1479545, -3.0790637, -5.946642, 1.1095668, -1.5775375, -4.0155277, 2.289419, -2.7572742, -4.0155277, 3.1479545, -3.0790637, -4.0155277, 3.1479545, -3.1866417, -5.946642, 2.289419, -2.7572742, -5.946642, 0.89498806, -1.6849582, -4.0155277, 1.2169664, -2.0067475, -4.7667265, 2.18224, -2.3285367, -5.946642, 1.4315451, -1.7922213, -4.8739057)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_abhr5"]
+points = PackedVector3Array(-0.9286635, -1.5773802, -4.122812, 0.8948095, 0.03188181, -0.904603, 0.8948095, -0.0757069, -0.904603, -0.9286635, 0.03188181, -0.904603, 0.8948095, -1.469949, -4.122812, -0.9286635, -1.5773802, -3.80055, 0.8948095, -1.5773802, -3.80055, -0.9286635, 0.03188181, -1.1194443, -0.9286635, -0.18298054, -1.0120237, -0.9286635, -1.469949, -4.122812, 0.8948095, 0.03188181, -1.1194443, 0.8948095, -0.18298054, -1.0120237, 0.8948095, -1.5773802, -4.122812, -0.9286635, -0.0757069, -0.904603)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xsqtg"]
+points = PackedVector3Array(0.8948095, 0.031881675, 0.9193635, -0.9286635, -0.075402446, -0.9041095, -0.9286635, 0.031881675, -0.9041095, 0.8948095, -0.075402446, -0.9041095, -0.9286635, -0.075402446, 0.9193635, -0.9286635, 0.031881675, 0.9193635, 0.8948095, 0.031881675, -0.9041095, 0.8948095, -0.075402446, 0.9193635)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wfv52"]
+points = PackedVector3Array(-4.0407662, -2.0582008, 0.05400104, 12.661901, 1.1674573, 0.05400104, -4.0407662, 1.1674573, 0.05400104, 12.661901, -2.0582008, 0.05400104)
+
+[node name="Mapa2" type="Node3D" unique_id=1162004411]
+
+[node name="Mapa2Jam" parent="." unique_id=1850423560 instance=ExtResource("1_0lbwi")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="Cubo_002" parent="Mapa2Jam" index="4" unique_id=1833686224]
+visible = false
+
+[node name="Cubo_009" parent="Mapa2Jam" index="5" unique_id=530879093]
+visible = false
+
+[node name="Cubo_010" parent="Mapa2Jam" index="6" unique_id=1048969487]
+visible = false
+
+[node name="Cubo_011" parent="Mapa2Jam" index="7" unique_id=1823519928]
+visible = false
+
+[node name="Cubo_012" parent="Mapa2Jam" index="10" unique_id=1266970521]
+visible = false
+
+[node name="Cubo_013" parent="Mapa2Jam" index="12" unique_id=219405378]
+visible = false
+
+[node name="Cubo_014" parent="Mapa2Jam" index="20" unique_id=2143434605]
+visible = false
+
+[node name="Cubo_015" parent="Mapa2Jam" index="22" unique_id=1981152689]
+visible = false
+
+[node name="Cubo_016" parent="Mapa2Jam" index="24" unique_id=1032869914]
+visible = false
+
+[node name="Cubo_017" parent="Mapa2Jam" index="26" unique_id=1461996774]
+visible = false
+
+[node name="Cubo_018" parent="Mapa2Jam" index="28" unique_id=1851232879]
+visible = false
+
+[node name="Cubo_019" parent="Mapa2Jam" index="30" unique_id=1300261664]
+visible = false
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_007" parent_id_path=PackedInt32Array(1850423560, 186551464) index="1" unique_id=373131994]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=446244359]
+shape = SubResource("ConvexPolygonShape3D_ncphg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=510779131]
+shape = SubResource("ConvexPolygonShape3D_tviyi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=717732301]
+shape = SubResource("ConvexPolygonShape3D_abhr5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=585544522]
+shape = SubResource("ConvexPolygonShape3D_xsqtg")
+
+[node name="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D" parent_id_path=PackedInt32Array(1850423560, 1210498665) index="0" unique_id=1392286068]
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_011" parent_id_path=PackedInt32Array(1850423560, 992084590) index="1" unique_id=1100830054]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D2" unique_id=604826670]
+shape = SubResource("ConvexPolygonShape3D_wfv52")
+
+[editable path="Mapa2Jam"]

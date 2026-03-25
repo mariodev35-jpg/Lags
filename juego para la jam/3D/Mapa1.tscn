@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b2yrenw4v84wg" path="res://3D/Arbol.tscn" id="2_vf6x3"]
 [ext_resource type="Material" uid="uid://cbrknxo1ydril" path="res://Materiales/MaterialTronco.tres" id="3_ubj75"]
 [ext_resource type="Material" uid="uid://biq5e6s63lkc" path="res://Materiales/MaterialHojas.tres" id="4_h7kux"]
+[ext_resource type="PackedScene" uid="uid://fhrfren6dq63" path="res://3D/CasaConInterior.tscn" id="5_h7kux"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bjpl8"]
 _surfaces = [{
@@ -71,43 +72,43 @@ buffer = PackedFloat32Array(0, 0, -1.001, -9.136051, 0, 1.001, 0, -11.022021, 1.
 
 [node name="Mapa1" type="Node3D" unique_id=1713730213]
 
-[node name="Mapa1Jam" parent="." unique_id=904391897 instance=ExtResource("1_nr2fw")]
+[node name="Mapa1Jam" parent="." unique_id=1721475679 instance=ExtResource("1_nr2fw")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Cubo" parent="Mapa1Jam" index="21" unique_id=2048549313]
+[node name="Cubo" parent="Mapa1Jam" index="21" unique_id=60898166]
 visible = false
 
-[node name="Cubo_001" parent="Mapa1Jam" index="22" unique_id=181058613]
+[node name="Cubo_001" parent="Mapa1Jam" index="22" unique_id=1061238093]
 visible = false
 
-[node name="Cubo_002" parent="Mapa1Jam" index="23" unique_id=1507603529]
+[node name="Cubo_002" parent="Mapa1Jam" index="23" unique_id=1683036645]
 visible = false
 
-[node name="Cubo_003" parent="Mapa1Jam" index="24" unique_id=2038508048]
+[node name="Cubo_003" parent="Mapa1Jam" index="24" unique_id=412367813]
 visible = false
 
-[node name="Cubo_004" parent="Mapa1Jam" index="25" unique_id=2070059177]
+[node name="Cubo_004" parent="Mapa1Jam" index="25" unique_id=1946825742]
 visible = false
 
-[node name="Cubo_005" parent="Mapa1Jam" index="26" unique_id=1349303039]
+[node name="Cubo_005" parent="Mapa1Jam" index="26" unique_id=961540895]
 visible = false
 
-[node name="Cubo_006" parent="Mapa1Jam" index="27" unique_id=625990164]
+[node name="Cubo_006" parent="Mapa1Jam" index="27" unique_id=126560281]
 visible = false
 
-[node name="Cubo_007" parent="Mapa1Jam" index="28" unique_id=166584787]
+[node name="Cubo_007" parent="Mapa1Jam" index="28" unique_id=1285688238]
 visible = false
 
-[node name="Cubo_008" parent="Mapa1Jam" index="29" unique_id=646379248]
+[node name="Cubo_008" parent="Mapa1Jam" index="29" unique_id=1512805543]
 visible = false
 
-[node name="Cubo_009" parent="Mapa1Jam" index="30" unique_id=59361177]
+[node name="Cubo_009" parent="Mapa1Jam" index="30" unique_id=1649665914]
 visible = false
 
-[node name="Cubo_010" parent="Mapa1Jam" index="31" unique_id=537153204]
+[node name="Cubo_010" parent="Mapa1Jam" index="31" unique_id=849990560]
 visible = false
 
-[node name="Cubo_011" parent="Mapa1Jam" index="32" unique_id=1197713843]
+[node name="Cubo_011" parent="Mapa1Jam" index="32" unique_id=1681745801]
 visible = false
 
 [node name="Arbol" parent="." unique_id=991158630 instance=ExtResource("2_vf6x3")]
@@ -122,6 +123,21 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 48.258316, 9.060396, -9
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="Node3D" unique_id=20745520]
 transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 36.136623, 0)
 multimesh = SubResource("MultiMesh_yc41w")
+
+[node name="CasaConInterior" parent="." unique_id=1276613269 instance=ExtResource("5_h7kux")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 35.642647, 9.267325, 10.419699)
+
+[node name="CasaConInterior2" parent="." unique_id=614322357 instance=ExtResource("5_h7kux")]
+transform = Transform3D(0.72068954, 0, -0.20762125, 0, 0.75, 0, 0.20762125, 0, 0.72068954, 55.73635, 9.267325, 10.42568)
+
+[node name="CasaConInterior3" parent="." unique_id=1084661736 instance=ExtResource("5_h7kux")]
+transform = Transform3D(-0.042506527, 0, -0.7487945, 0, 0.75, 0, 0.7487945, 0, -0.042506527, 63.534973, 9.267325, 27.17285)
+
+[node name="CasaConInterior4" parent="." unique_id=246481118 instance=ExtResource("5_h7kux")]
+transform = Transform3D(-0.7085788, 0, 0.24579686, 0, 0.75, 0, -0.24579686, 0, -0.7085788, 30.41922, 9.267325, 33.29568)
+
+[node name="CasaConInterior5" parent="." unique_id=2066129573 instance=ExtResource("5_h7kux")]
+transform = Transform3D(-0.74976474, 0, -0.018782124, 0, 0.75, 0, 0.018782124, 0, -0.74976474, 49.037323, 9.267325, 37.18603)
 
 [editable path="Mapa1Jam"]
 [editable path="Arbol"]

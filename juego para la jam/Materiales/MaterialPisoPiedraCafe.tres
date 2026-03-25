@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bc3aawljsncch"]
+
+[ext_resource type="Texture2D" uid="uid://bjuiuomh0vicm" path="res://Modelos/Mapa1Jam_Piedracafe.png" id="1_pnm87"]
+
+[resource]
+resource_name = "MaterialPisoPiedraCafe"
+cull_mode = 2
+albedo_texture = ExtResource("1_pnm87")
+roughness = 0.5
+uv1_scale = Vector3(100, 100, 1)
+uv1_offset = Vector3(0, -99, 0)

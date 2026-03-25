@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://fhrfren6dq63"]
+
+[ext_resource type="PackedScene" uid="uid://03dad148gy1c" path="res://Modelos/CasaConInterior.glb" id="1_x26mf"]
+
+[node name="CasaConInterior" type="Node3D" unique_id=1276613269]
+
+[node name="CasaConInterior" parent="." unique_id=294851688 instance=ExtResource("1_x26mf")]

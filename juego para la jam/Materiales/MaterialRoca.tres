@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5ojpom66w82n"]
+
+[ext_resource type="Texture2D" uid="uid://bil2xo6hs8ayo" path="res://Modelos/Mapa1Jam_PiedraPixel.png" id="1_lu7il"]
+
+[resource]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_lu7il")
+metallic_specular = 0.0
+uv1_scale = Vector3(4, 3, 1)
+uv1_offset = Vector3(0, -2, 0)

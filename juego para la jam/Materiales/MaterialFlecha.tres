@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvp2gfmmt8qha"]
+
+[ext_resource type="Texture2D" uid="uid://ck4gpy31eer6y" path="res://Modelos/Mapa1Jam_FlechaTierraPixel.png" id="1_iuisp"]
+
+[resource]
+resource_name = "MaterialFlecha"
+cull_mode = 2
+albedo_texture = ExtResource("1_iuisp")
+roughness = 0.5

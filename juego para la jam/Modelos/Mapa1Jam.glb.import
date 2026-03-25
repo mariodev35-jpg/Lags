@@ -37,6 +37,44 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material.002": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialRoca.tres",
+"use_external/path": "uid://5ojpom66w82n"
+},
+"MaterialFlecha": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialFlecha.tres",
+"use_external/path": "uid://cvp2gfmmt8qha"
+},
+"MaterialParedPiedra": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialParedPiedra.tres",
+"use_external/path": "uid://grj2g60ku6qk"
+},
+"MaterialPisoCampo": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialPisoCampo.tres",
+"use_external/path": "uid://2pvtp12yvidh"
+},
+"MaterialPisoHiervaConBloquePiedra": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialPisoHiervaConBloquePiedra.tres",
+"use_external/path": "uid://dk4cyfjvihr7"
+},
+"MaterialPisoPiedraCafe": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialPisoPiedraCafe.tres",
+"use_external/path": "uid://bc3aawljsncch"
+},
+"MaterialPisoPiedraOscura": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Materiales/MaterialPisoPiedraOscura.tres",
+"use_external/path": "uid://6fgulm8tdsg7"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

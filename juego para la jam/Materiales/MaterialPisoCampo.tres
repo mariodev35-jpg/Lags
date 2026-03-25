@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://2pvtp12yvidh"]
+
+[ext_resource type="Texture2D" uid="uid://be3uq3r1w01gh" path="res://Modelos/Mapa1Jam_HiervaPixel.png" id="1_a6lrh"]
+
+[resource]
+resource_name = "MaterialPisoCampo"
+cull_mode = 2
+albedo_texture = ExtResource("1_a6lrh")
+roughness = 0.5
+uv1_scale = Vector3(25, 25, 1)
+uv1_offset = Vector3(0, -24, 0)
