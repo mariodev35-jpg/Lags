@@ -6,6 +6,9 @@
 [ext_resource type="Material" uid="uid://biq5e6s63lkc" path="res://Materiales/MaterialHojas.tres" id="4_h7kux"]
 [ext_resource type="PackedScene" uid="uid://fhrfren6dq63" path="res://3D/CasaConInterior.tscn" id="5_h7kux"]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h7kux"]
+points = PackedVector3Array(-5.9757185, -0.17991905, -11.514819, 5.898938, 0.17991905, 11.514819, 5.898938, -0.17991905, 11.514819, 5.898938, 0.17991905, -11.514819, -5.9757185, 0.17991905, 11.514819, -5.9757185, -0.17991905, 11.514819, 5.898938, -0.17991905, -11.514819, -5.9757185, 0.17991905, -11.514819)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_bjpl8"]
 _surfaces = [{
 "aabb": AABB(-5.1205187, -0.9682703, -1.5049057, 10.763196, 1.8552766, 3.0098114),
@@ -72,44 +75,49 @@ buffer = PackedFloat32Array(0, 0, -1.001, -9.136051, 0, 1.001, 0, -11.022021, 1.
 
 [node name="Mapa1" type="Node3D" unique_id=1713730213]
 
-[node name="Mapa1Jam" parent="." unique_id=1721475679 instance=ExtResource("1_nr2fw")]
+[node name="Mapa1Jam" parent="." unique_id=395027507 instance=ExtResource("1_nr2fw")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Cubo" parent="Mapa1Jam" index="21" unique_id=60898166]
+[node name="Cubo" parent="Mapa1Jam" index="21" unique_id=380276893]
 visible = false
 
-[node name="Cubo_001" parent="Mapa1Jam" index="22" unique_id=1061238093]
+[node name="Cubo_001" parent="Mapa1Jam" index="22" unique_id=1826120143]
 visible = false
 
-[node name="Cubo_002" parent="Mapa1Jam" index="23" unique_id=1683036645]
+[node name="Cubo_002" parent="Mapa1Jam" index="23" unique_id=1506701085]
 visible = false
 
-[node name="Cubo_003" parent="Mapa1Jam" index="24" unique_id=412367813]
+[node name="Cubo_003" parent="Mapa1Jam" index="24" unique_id=356933830]
 visible = false
 
-[node name="Cubo_004" parent="Mapa1Jam" index="25" unique_id=1946825742]
+[node name="Cubo_004" parent="Mapa1Jam" index="25" unique_id=1437770816]
 visible = false
 
-[node name="Cubo_005" parent="Mapa1Jam" index="26" unique_id=961540895]
+[node name="Cubo_005" parent="Mapa1Jam" index="26" unique_id=1117786904]
 visible = false
 
-[node name="Cubo_006" parent="Mapa1Jam" index="27" unique_id=126560281]
+[node name="Cubo_006" parent="Mapa1Jam" index="27" unique_id=1635956247]
 visible = false
 
-[node name="Cubo_007" parent="Mapa1Jam" index="28" unique_id=1285688238]
+[node name="Cubo_007" parent="Mapa1Jam" index="28" unique_id=1793584680]
 visible = false
 
-[node name="Cubo_008" parent="Mapa1Jam" index="29" unique_id=1512805543]
+[node name="Cubo_008" parent="Mapa1Jam" index="29" unique_id=1018391705]
 visible = false
 
-[node name="Cubo_009" parent="Mapa1Jam" index="30" unique_id=1649665914]
+[node name="Cubo_009" parent="Mapa1Jam" index="30" unique_id=801016000]
 visible = false
 
-[node name="Cubo_010" parent="Mapa1Jam" index="31" unique_id=849990560]
+[node name="Cubo_010" parent="Mapa1Jam" index="31" unique_id=1794861289]
 visible = false
 
-[node name="Cubo_011" parent="Mapa1Jam" index="32" unique_id=1681745801]
+[node name="Cubo_011" parent="Mapa1Jam" index="32" unique_id=374072809]
 visible = false
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa1Jam/Pared_002" parent_id_path=PackedInt32Array(395027507, 2110932299) index="1" unique_id=1793757574]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa1Jam/Pared_002/StaticBody3D2" unique_id=1744074282]
+shape = SubResource("ConvexPolygonShape3D_h7kux")
 
 [node name="Arbol" parent="." unique_id=991158630 instance=ExtResource("2_vf6x3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 48.258316, 7.165205, -9.367561)
