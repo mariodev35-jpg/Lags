@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://e4b7fu7ws7at"]
+
+[ext_resource type="Script" uid="uid://cy85pcyoo875g" path="res://nexlevel.gd" id="1_bxarl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_shpnv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ty78s"]
+size = Vector3(1, 1, 2.5419922)
+
+[node name="Area3D" type="Area3D" unique_id=1586055141]
+script = ExtResource("1_bxarl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1214393749]
+transform = Transform3D(3.2260826, 0, 0, 0, 4.482166, 0, 0, 0, 0.35320333, 0, 0, 0)
+mesh = SubResource("BoxMesh_shpnv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=364638850]
+transform = Transform3D(3.2260826, 0, 0, 0, 4.482166, 0, 0, 0, 0.35320333, 0, 0, 0)
+shape = SubResource("BoxShape3D_ty78s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

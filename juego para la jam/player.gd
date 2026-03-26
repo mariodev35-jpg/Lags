@@ -27,12 +27,15 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("run") and running == true:
 		running = false
 	if running == true and direction and Global.runmode >= 0:
+		$Camera3D.fov = 80.0
 		SPEED =  7.0 
 		Global.runmode -= 5 *delta
 	elif running == true and !direction and Global.runmode <= 50 :
+		$Camera3D.fov = 75
 		SPEED =5.0
 		Global.runmode += 5 * delta
 	elif running == false and Global.runmode <= 50:
+		$Camera3D.fov = 75
 		SPEED =5.0
 		Global.runmode += 5 *delta
 	

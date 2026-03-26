@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://if0dw7hmep6s"]
+
+[ext_resource type="PackedScene" uid="uid://up73arf2ep0s" path="res://3D/Mapa2.tscn" id="1_55y45"]
+[ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_nwr2e"]
+[ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="3_4f56f"]
+
+[node name="Node3D" type="Node3D" unique_id=1475138755]
+
+[node name="Mapa2" parent="." unique_id=1162004411 instance=ExtResource("1_55y45")]
+
+[node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_nwr2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.214186, -5.2792315, 41.990257)
+
+[node name="CanvasLayer" parent="." unique_id=1289846114 instance=ExtResource("3_4f56f")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=731325001]
+bus = &"musicafondo"
