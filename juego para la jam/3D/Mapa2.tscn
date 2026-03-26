@@ -96,43 +96,43 @@ buffer = PackedFloat32Array(0.501, 0, 0, -28.782799, 0, 0.501, 0, -6.5823174, 0,
 [node name="Mapa2Jam" parent="." unique_id=375866950 instance=ExtResource("1_0lbwi")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Cubo_002" parent="Mapa2Jam" index="4" unique_id=1076503581]
+[node name="Cubo_002" parent="Mapa2Jam" index="4" unique_id=421208948]
 visible = false
 
-[node name="Cubo_009" parent="Mapa2Jam" index="5" unique_id=310692314]
+[node name="Cubo_009" parent="Mapa2Jam" index="5" unique_id=1934227223]
 visible = false
 
-[node name="Cubo_010" parent="Mapa2Jam" index="6" unique_id=507245019]
+[node name="Cubo_010" parent="Mapa2Jam" index="6" unique_id=1812268415]
 visible = false
 
-[node name="Cubo_011" parent="Mapa2Jam" index="7" unique_id=1609622329]
+[node name="Cubo_011" parent="Mapa2Jam" index="7" unique_id=753408722]
 visible = false
 
-[node name="Cubo_012" parent="Mapa2Jam" index="10" unique_id=111164559]
+[node name="Cubo_012" parent="Mapa2Jam" index="10" unique_id=1983666331]
 visible = false
 
-[node name="Cubo_013" parent="Mapa2Jam" index="12" unique_id=1370796109]
+[node name="Cubo_013" parent="Mapa2Jam" index="12" unique_id=249794819]
 visible = false
 
-[node name="Cubo_014" parent="Mapa2Jam" index="20" unique_id=1514571536]
+[node name="Cubo_014" parent="Mapa2Jam" index="20" unique_id=864840409]
 visible = false
 
-[node name="Cubo_015" parent="Mapa2Jam" index="22" unique_id=1649781224]
+[node name="Cubo_015" parent="Mapa2Jam" index="22" unique_id=1594631577]
 visible = false
 
-[node name="Cubo_016" parent="Mapa2Jam" index="24" unique_id=1567912109]
+[node name="Cubo_016" parent="Mapa2Jam" index="24" unique_id=479004114]
 visible = false
 
-[node name="Cubo_017" parent="Mapa2Jam" index="26" unique_id=24727684]
+[node name="Cubo_017" parent="Mapa2Jam" index="26" unique_id=2089712378]
 visible = false
 
-[node name="Cubo_018" parent="Mapa2Jam" index="28" unique_id=2134454873]
+[node name="Cubo_018" parent="Mapa2Jam" index="28" unique_id=175966506]
 visible = false
 
-[node name="Cubo_019" parent="Mapa2Jam" index="30" unique_id=1651736988]
+[node name="Cubo_019" parent="Mapa2Jam" index="30" unique_id=2035552690]
 visible = false
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_007" parent_id_path=PackedInt32Array(375866950, 457366823) index="1" unique_id=373131994]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_007" parent_id_path=PackedInt32Array(375866950, 860248914) index="1" unique_id=373131994]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=446244359]
 shape = SubResource("ConvexPolygonShape3D_ncphg")
@@ -146,10 +146,10 @@ shape = SubResource("ConvexPolygonShape3D_abhr5")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=585544522]
 shape = SubResource("ConvexPolygonShape3D_xsqtg")
 
-[node name="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D" parent_id_path=PackedInt32Array(375866950, 1292645976) index="0" unique_id=1657986336]
+[node name="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D" parent_id_path=PackedInt32Array(375866950, 417444042) index="0" unique_id=506721751]
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_011" parent_id_path=PackedInt32Array(375866950, 1715312315) index="1" unique_id=1100830054]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_011" parent_id_path=PackedInt32Array(375866950, 474256749) index="1" unique_id=1100830054]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D2" unique_id=604826670]
 shape = SubResource("ConvexPolygonShape3D_wfv52")
@@ -157,7 +157,7 @@ shape = SubResource("ConvexPolygonShape3D_wfv52")
 [node name="Arbol" parent="." unique_id=991158630 instance=ExtResource("2_abhr5")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.772736, -2.8286057, -34.281628)
 
-[node name="Arbol" parent="Arbol/Arbol Pixel" parent_id_path=PackedInt32Array(991158630, 459819919) index="0" unique_id=1753880115]
+[node name="Arbol" parent="Arbol/Arbol Pixel" parent_id_path=PackedInt32Array(991158630, 459819919) index="0" unique_id=2080000410]
 transform = Transform3D(1, 0, 0, 0, 5.4463925, 0, 0, 0, 1, 0, -2.7559881, 0)
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=934248750]

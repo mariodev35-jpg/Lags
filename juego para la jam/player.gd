@@ -19,7 +19,7 @@ func _input(event: InputEvent) -> void:
 		rotate_y(deg_to_rad(-event.relative.x * sens))
 		cam.rotation.x = clamp(cam.rotation.x,deg_to_rad(-45),deg_to_rad(30))
 func _process(delta: float) -> void:
-	
+	sens = Global.sensi
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if Input.is_action_just_pressed("run") and running == false:

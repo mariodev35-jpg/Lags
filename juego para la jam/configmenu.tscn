@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bkoy5kcjv8xmr"]
+
+[ext_resource type="Script" uid="uid://dhp0xkycrv41q" path="res://configmenu.gd" id="1_xq5vx"]
+
+[node name="Control" type="Control" unique_id=82196830]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xq5vx")
+
+[node name="Button" type="Button" parent="." unique_id=1515277152]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "volver"
+
+[node name="musicbar" type="VSlider" parent="." unique_id=1575162527]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 144.0
+offset_right = 229.0
+offset_bottom = 479.0
+min_value = -60.0
+max_value = 6.0
+value = 6.0
+
+[node name="efectbar" type="VSlider" parent="." unique_id=832250406]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 140.0
+offset_right = 395.0
+offset_bottom = 475.0
+min_value = -70.0
+max_value = 6.0
+value = 6.0
+
+[node name="mutebuton" type="CheckBox" parent="." unique_id=828246576]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 215.0
+offset_right = 564.0
+offset_bottom = 239.0
+
+[node name="resolucionbar" type="OptionButton" parent="." unique_id=768423940]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 190.0
+offset_right = 744.0
+offset_bottom = 221.0
+selected = 3
+item_count = 5
+popup/item_0/text = "640x480"
+popup/item_0/id = 0
+popup/item_1/text = "800x600"
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "1024x768"
+popup/item_2/id = 2
+popup/item_3/text = "1152x648"
+popup/item_3/id = 3
+popup/item_4/text = "1280x960"
+popup/item_4/id = 4
+
+[node name="fullscreen" type="CheckBox" parent="." unique_id=648196131]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 195.0
+offset_right = 947.0
+offset_bottom = 219.0
+
+[node name="Label" type="Label" parent="." unique_id=749829757]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 111.0
+offset_right = 243.0
+offset_bottom = 134.0
+text = "musica"
+
+[node name="Label2" type="Label" parent="." unique_id=480718529]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 104.0
+offset_right = 472.0
+offset_bottom = 127.0
+text = "efectos de sonidos "
+
+[node name="Label3" type="Label" parent="." unique_id=1055384673]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 192.0
+offset_right = 685.0
+offset_bottom = 215.0
+text = "mutear"
+
+[node name="Label4" type="Label" parent="." unique_id=1810487588]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 160.0
+offset_right = 796.0
+offset_bottom = 183.0
+text = "resolución "
+
+[node name="Label5" type="Label" parent="." unique_id=1720170967]
+layout_mode = 0
+offset_left = 765.0
+offset_top = 196.0
+offset_right = 913.0
+offset_bottom = 219.0
+text = "pantalla completa "
+
+[node name="sensbar" type="HSlider" parent="." unique_id=1600543232]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 321.0
+offset_right = 839.0
+offset_bottom = 337.0
+min_value = 0.1
+max_value = 0.9
+step = 0.1
+value = 0.2
+
+[node name="Label6" type="Label" parent="." unique_id=141857480]
+layout_mode = 0
+offset_left = 621.0
+offset_top = 295.0
+offset_right = 769.0
+offset_bottom = 318.0
+text = "sensibilidad "
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="musicbar" to="." method="_on_musicbar_value_changed"]
+[connection signal="value_changed" from="efectbar" to="." method="_on_efectbar_value_changed"]
+[connection signal="toggled" from="mutebuton" to="." method="_on_mutebuton_toggled"]
+[connection signal="item_selected" from="resolucionbar" to="." method="_on_resolucionbar_item_selected"]
+[connection signal="toggled" from="fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="value_changed" from="sensbar" to="." method="_on_sensbar_value_changed"]
