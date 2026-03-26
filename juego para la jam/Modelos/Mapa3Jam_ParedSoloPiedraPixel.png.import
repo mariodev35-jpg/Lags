@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uuerjhn5jqtp"
-path.s3tc="res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.s3tc.ctex"
+uid="uid://b3pcob3081w6x"
+path.s3tc="res://.godot/imported/Mapa3Jam_ParedSoloPiedraPixel.png-2e08e375e7478de7835b277342e9dc30.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0cf401e3724215f29a953099776aad96"
+"md5": "e2d3feb7edc87f5dde9073ae4d9cdc43"
 }
 
 [deps]
 
-source_file="res://Modelos/Mapa2Jam_PeredPiedraPixel.png"
-dest_files=["res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.s3tc.ctex"]
+source_file="res://Modelos/Mapa3Jam_ParedSoloPiedraPixel.png"
+dest_files=["res://.godot/imported/Mapa3Jam_ParedSoloPiedraPixel.png-2e08e375e7478de7835b277342e9dc30.s3tc.ctex"]
 
 [params]
 

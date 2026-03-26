@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uuerjhn5jqtp"
-path.s3tc="res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.s3tc.ctex"
+uid="uid://b0bhtpetyivm"
+path.s3tc="res://.godot/imported/Mapa3Jam_BasePiedraHierva.png-51b192d36a044a36977d7c56429d20e4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0cf401e3724215f29a953099776aad96"
+"md5": "54d73a661c4c2ce63a4dc8e8e7e88880"
 }
 
 [deps]
 
-source_file="res://Modelos/Mapa2Jam_PeredPiedraPixel.png"
-dest_files=["res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.s3tc.ctex"]
+source_file="res://Modelos/Mapa3Jam_BasePiedraHierva.png"
+dest_files=["res://.godot/imported/Mapa3Jam_BasePiedraHierva.png-51b192d36a044a36977d7c56429d20e4.s3tc.ctex"]
 
 [params]
 
