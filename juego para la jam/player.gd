@@ -1,4 +1,5 @@
 extends CharacterBody3D
+var showscream = false
 var running = true
 var alumbra = false
 var agar = false
@@ -83,7 +84,7 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	#var tween = create_tween()
-	if Global.stoplight == true and !direction and alumbra == false:
+	if Global.stoplight == true and !direction and alumbra == false :
 		
 		$AnimationPlayer.play("osvu")
 		
@@ -101,10 +102,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
-
+	if showscream == true:
+		$garraso.show()
+	else:
+		$garraso.hide()
 	move_and_slide()
+#susto de la garra matatr al personaje
+func did_scream():
+	showscream = true 
+	Global.did  = true
+
 #esta es la funcion de muerte
 func did():
+	Global.did = false
 	global_position = spawn_pos.global_position
 
 #region esta es la revisa si tienes objetos interacuables serca
@@ -133,3 +143,7 @@ func _on_lusdetect_body_exited(body: Node3D) -> void:
 func _on_suelodetect_body_entered(body: Node3D) -> void:
 	if not  velocity.y >= 0:
 		$AnimationPlayer2.play("fall")
+
+
+func _on_control_did() -> void:
+	did()

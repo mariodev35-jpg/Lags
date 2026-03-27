@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt1xk6gqpfsuf"
+path="res://.godot/imported/musica caminos version 2.ogg-512ec1e59467c742736b85ad14f54b06.oggvorbisstr"
+
+[deps]
+
+source_file="res://Musicas/musica caminos version 2.ogg"
+dest_files=["res://.godot/imported/musica caminos version 2.ogg-512ec1e59467c742736b85ad14f54b06.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

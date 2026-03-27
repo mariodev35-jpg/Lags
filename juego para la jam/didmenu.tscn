@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://def2a3ewmx1dj"]
+
+[ext_resource type="Script" uid="uid://d0n0c0nqsghuw" path="res://didmenu.gd" id="1_2qvoj"]
+
+[node name="Control" type="Control" unique_id=1698534508]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2qvoj")
+
+[node name="Label" type="Label" parent="." unique_id=465696810]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_right = 45.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 93
+text = "has muerto"
+
+[node name="Label2" type="Label" parent="." unique_id=1238418049]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 125.0
+offset_right = 668.0
+offset_bottom = 148.0
+text = "el q mucho abarca poco aprieta "
+
+[node name="Button" type="Button" parent="." unique_id=303232058]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 234.0
+offset_right = 565.0
+offset_bottom = 265.0
+text = "reiniciar "
+
+[node name="Button2" type="Button" parent="." unique_id=121993046]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 300.0
+offset_right = 549.0
+offset_bottom = 331.0
+text = "menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

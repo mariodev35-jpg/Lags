@@ -100,7 +100,7 @@ offset_right = 101.0
 offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "interactuar"
+text = "interactuar(E)"
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=901753798]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)

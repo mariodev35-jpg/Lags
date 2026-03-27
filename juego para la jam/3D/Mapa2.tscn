@@ -114,9 +114,6 @@ visible = false
 [node name="Cubo_013" parent="Mapa2Jam" index="12" unique_id=249794819]
 visible = false
 
-[node name="Cubo_014" parent="Mapa2Jam" index="20" unique_id=864840409]
-visible = false
-
 [node name="Cubo_015" parent="Mapa2Jam" index="22" unique_id=1594631577]
 visible = false
 
@@ -127,6 +124,7 @@ visible = false
 visible = false
 
 [node name="Cubo_018" parent="Mapa2Jam" index="28" unique_id=175966506]
+transform = Transform3D(-4.0110917, 0, -1.821242e-07, 0, 1, 0, 1.3069796e-06, 0, -0.55893517, -1.5589492, -0.76528865, 0.52529836)
 visible = false
 
 [node name="Cubo_019" parent="Mapa2Jam" index="30" unique_id=2035552690]

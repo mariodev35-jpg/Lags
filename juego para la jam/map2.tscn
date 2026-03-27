@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://up73arf2ep0s" path="res://3D/Mapa2.tscn" id="1_55y45"]
 [ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_nwr2e"]
 [ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="3_4f56f"]
+[ext_resource type="PackedScene" uid="uid://def2a3ewmx1dj" path="res://didmenu.tscn" id="4_nwr2e"]
 
 [node name="Node3D" type="Node3D" unique_id=1475138755]
 
@@ -15,3 +16,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.214186, -5.2792315, 41.990
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=731325001]
 bus = &"musicafondo"
+
+[node name="Control" parent="." unique_id=1698534508 instance=ExtResource("4_nwr2e")]
+
+[connection signal="did" from="Control" to="player" method="_on_control_did"]
