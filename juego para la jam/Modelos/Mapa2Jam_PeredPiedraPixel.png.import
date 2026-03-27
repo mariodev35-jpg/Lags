@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uuerjhn5jqtp"
-path.etc2="res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.etc2.ctex"
+path.s3tc="res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Modelos/Mapa2Jam_PeredPiedraPixel.png"
-dest_files=["res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.etc2.ctex"]
+dest_files=["res://.godot/imported/Mapa2Jam_PeredPiedraPixel.png-3ea878e784e941e3e1e2d2099a90023d.s3tc.ctex"]
 
 [params]
 

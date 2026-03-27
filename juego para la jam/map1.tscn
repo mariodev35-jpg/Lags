@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://dt1xk6gqpfsuf" path="res://Musicas/musica caminos version 2.ogg" id="2_vl4cn"]
 [ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="4_bwbs4"]
 [ext_resource type="PackedScene" uid="uid://squ400ecovdp" path="res://farola.tscn" id="5_bwbs4"]
+[ext_resource type="Material" uid="uid://5ojpom66w82n" path="res://Materiales/MaterialRoca.tres" id="6_js2t8"]
 [ext_resource type="PackedScene" uid="uid://d3db1ecasv2nv" path="res://door.tscn" id="6_na4y3"]
 [ext_resource type="PackedScene" uid="uid://dad6os626kjt6" path="res://palanca.tscn" id="7_gtvy4"]
 [ext_resource type="ArrayOccluder3D" uid="uid://ctjlhnqwyi0rh" path="res://map1.occ" id="7_sko3c"]
@@ -36,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.351473, 1.0214887, 5.976281
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.101517, 4.0894494, -33.001194)
 
 [node name="farola3" parent="." unique_id=1482170674 instance=ExtResource("5_bwbs4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.150917, 4.0894494, -19.728838)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.150917, 4.0894494, -23.890524)
 
 [node name="farola4" parent="." unique_id=1613573890 instance=ExtResource("5_bwbs4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.532089, 7.645827, 16.741354)
@@ -46,6 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0291395, 8.02181, 2.244225
 
 [node name="MeshInstance3D" parent="AnimatableBody3D" index="0" unique_id=1581118574]
 transform = Transform3D(9.988822, 0, 0, 0, 3.6175938, 0, 0, 0, 0.26421946, -0.84970665, 0.26746368, -0.4850874)
+surface_material_override/0 = ExtResource("6_js2t8")
 
 [node name="CollisionShape3D" parent="AnimatableBody3D" index="1" unique_id=2104153548]
 transform = Transform3D(17.288881, 0, 0, 0, 2.4961874, 0, 0, 0, 0.26421946, 3.0739546, 0.18320751, -0.52449226)
@@ -78,6 +80,7 @@ escen = "res://map2.tscn"
 
 [node name="MeshInstance3D" parent="Area3D" index="0" unique_id=1214393749]
 transform = Transform3D(7.2497873, 0, 0, 0, 8.882424, 0, 0, 0, 0.35320333, 0, 0, 1.2204704)
+surface_material_override/0 = ExtResource("6_js2t8")
 
 [node name="CollisionShape3D" parent="Area3D" index="1" unique_id=364638850]
 transform = Transform3D(7.2497873, 0, 0, 0, 8.882424, 0, 0, 0, 0.35320333, 0, 0, 0.94815063)

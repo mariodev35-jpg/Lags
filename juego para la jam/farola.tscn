@@ -3,12 +3,48 @@
 [ext_resource type="Script" uid="uid://d0f04nlmaxod1" path="res://farole.gd" id="1_m25s7"]
 [ext_resource type="AudioStream" uid="uid://by3y7hu5b1fip" path="res://Efectos de sonidos /Ambiente /encendido fuego.ogg" id="2_v2p15"]
 [ext_resource type="Texture2D" uid="uid://dxeodcdvve6ub" path="res://Sprite /piesa_icono_luz1.png" id="3_7ka3t"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_ljvjc"]
+[ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="4_wlayv"]
+[ext_resource type="PackedScene" uid="uid://ceh4a3hiqyvip" path="res://Modelos/Antorcha.glb" id="5_wlayv"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_m25s7"]
 height = 2.1855469
 radius = 0.21484375
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcy7u"]
+atlas = ExtResource("4_wlayv")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbgtd"]
+atlas = ExtResource("4_wlayv")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye17o"]
+atlas = ExtResource("4_wlayv")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wojyf"]
+atlas = ExtResource("4_wlayv")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wojyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcy7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbgtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye17o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wojyf")
+}],
+"loop": true,
+"name": &"Encender",
+"speed": 5.0
+}]
 
 [node name="farola" type="StaticBody3D" unique_id=1870643421 groups=["inter", "lus"]]
 script = ExtResource("1_m25s7")
@@ -17,7 +53,6 @@ metadata/_custom_type_script = "uid://ssbrhor7yy2x"
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=184152556]
 transform = Transform3D(0.35258815, 0, 0, 0, 1.1370305, 0, 0, 0, 0.45600998, 0, 0, 0)
 ignore_occlusion_culling = true
-mesh = SubResource("CylinderMesh_ljvjc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=272012500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017840505, 0)
@@ -37,3 +72,15 @@ bus = &"efectssounds"
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.8214072, 0)
 billboard = 1
 texture = ExtResource("3_7ka3t")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1266056460]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.7546215, 0)
+visible = false
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_wojyf")
+animation = &"Encender"
+frame_progress = 0.15937996
+
+[node name="Antorcha" parent="." unique_id=514758733 instance=ExtResource("5_wlayv")]
+
+[editable path="Antorcha"]

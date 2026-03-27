@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gx8yxnxl6lot"
-path.etc2="res://.godot/imported/Arbol Pixel_ArbolCortezaPixel.png-59866e6a1da88a2f4d6e0578db7aa71c.etc2.ctex"
+path.s3tc="res://.godot/imported/Arbol Pixel_ArbolCortezaPixel.png-59866e6a1da88a2f4d6e0578db7aa71c.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Modelos/Arbol Pixel_ArbolCortezaPixel.png"
-dest_files=["res://.godot/imported/Arbol Pixel_ArbolCortezaPixel.png-59866e6a1da88a2f4d6e0578db7aa71c.etc2.ctex"]
+dest_files=["res://.godot/imported/Arbol Pixel_ArbolCortezaPixel.png-59866e6a1da88a2f4d6e0578db7aa71c.s3tc.ctex"]
 
 [params]
 

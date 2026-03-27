@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bypssojronade"]
+
+[ext_resource type="PackedScene" uid="uid://6q6uhv4foi7d" path="res://Modelos/Mapa3Jam.glb" id="1_7aopr"]
+
+[node name="Mapa3" type="Node3D" unique_id=1043606636]
+
+[node name="Mapa3Jam" parent="." unique_id=524863401 instance=ExtResource("1_7aopr")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
