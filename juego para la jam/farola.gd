@@ -15,5 +15,9 @@ func use():
 func _process(delta: float) -> void:
 	if encendido == true:
 		$OmniLight3D.show()
+		$Sprite3D.visible = false
+		$AnimatedSprite3D.play("Encender")
+		$AnimatedSprite3D.visible = true
+		$Antorcha/Base_001.visible = false
 	else:
 		$OmniLight3D.hide()

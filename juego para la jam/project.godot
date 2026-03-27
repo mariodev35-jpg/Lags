@@ -12,7 +12,7 @@ config_version=5
 
 config/name="juego para la jam"
 config/tags=PackedStringArray("juego_para_la_jam")
-run/main_scene="uid://bypssojronade"
+run/main_scene="uid://sqbqey3p10ue"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
