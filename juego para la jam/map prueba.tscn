@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cnuvi1dakx7nm" path="res://box.tscn" id="8_3lcsn"]
 [ext_resource type="AudioStream" uid="uid://tfq14jv3ym12" path="res://Efectos de sonidos /Ambiente /fx viento oscuro (1).ogg" id="8_lfatq"]
 [ext_resource type="PackedScene" uid="uid://cjiyu2w87r7s5" path="res://placpres.tscn" id="9_3lcsn"]
+[ext_resource type="PackedScene" uid="uid://ga86f5m5wi7c" path="res://fogatasimple.tscn" id="10_h1k2n"]
 
 [node name="Node3D" type="Node3D" unique_id=1831581789]
 
@@ -86,7 +87,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.602355, 0)
 [node name="CollisionShape3D" parent="Area3D" index="0" unique_id=901691573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9552536, -5.1171, -1.4941101)
 
-[node name="farola" parent="." unique_id=1870643421 groups=["lus"] instance=ExtResource("6_ue3y4")]
+[node name="farola" parent="." unique_id=1870643421 instance=ExtResource("6_ue3y4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5800538, -7.1688395, -1.5918984)
 
 [node name="StaticBody3D2" parent="." unique_id=2035540868 node_paths=PackedStringArray("obje") instance=ExtResource("7_0r34a")]
@@ -101,5 +102,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3157017, 1.4394658, 3.14465
 
 [node name="Area3D2" parent="." unique_id=1242632909 instance=ExtResource("9_3lcsn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4587109, 4.9905033)
+
+[node name="lus" parent="." unique_id=1826984970 instance=ExtResource("10_h1k2n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50177145, -1.5706131)
 
 [editable path="Area3D"]

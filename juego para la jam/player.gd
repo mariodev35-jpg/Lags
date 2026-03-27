@@ -11,7 +11,10 @@ var fall = false
 @onready var cam = $Camera3D
 var sens = 0.2
 var SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 4.0
+@export var gara = []
+func _ready() -> void:
+	$garraso.texture = gara.pick_random()
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventScreenDrag and event.position.x >= 620 or event is InputEventMouseMotion :

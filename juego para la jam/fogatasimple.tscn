@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ga86f5m5wi7c"]
+
+[ext_resource type="Script" uid="uid://c662kgyxrxwm2" path="res://fogatasimple.gd" id="1_m8iw4"]
+[ext_resource type="AudioStream" uid="uid://b4d86xtpsh82w" path="res://Efectos de sonidos /Ambiente /crepitar fuego.ogg" id="2_wmtqq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m8iw4"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_wmtqq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ql2cf"]
+
+[node name="lus" type="StaticBody3D" unique_id=1826984970 groups=["inter", "lus"]]
+script = ExtResource("1_m8iw4")
+metadata/_custom_type_script = "uid://ssbrhor7yy2x"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=207183452]
+transform = Transform3D(0.6606666, 0, 0, 0, 1, 0, 0, 0, 0.63638663, 0, 0, 0)
+mesh = SubResource("PlaneMesh_m8iw4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1118667745]
+transform = Transform3D(0.75833243, 0, 0, 0, 1, 0, 0, 0, 0.5872395, 0, 0.50399685, 0)
+mesh = SubResource("PrismMesh_wmtqq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2017451390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38752425, 0)
+shape = SubResource("BoxShape3D_ql2cf")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1711875772]
+stream = ExtResource("2_wmtqq")

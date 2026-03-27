@@ -47,6 +47,7 @@ animations = [{
 }]
 
 [node name="farola" type="StaticBody3D" unique_id=1870643421 groups=["inter", "lus"]]
+visible = false
 script = ExtResource("1_m25s7")
 metadata/_custom_type_script = "uid://ssbrhor7yy2x"
 
@@ -60,6 +61,7 @@ shape = SubResource("CylinderShape3D_m25s7")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=867860769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3751545, 0)
+light_color = Color(1, 0.2784314, 0.03529412, 1)
 light_energy = 3.032
 omni_range = 10.0
 
