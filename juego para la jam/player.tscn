@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://5hbu8dtn7ofc" path="res://Efectos de sonidos /Cesped/2  pasos pasto.ogg" id="6_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://cv2583cmbamy8" path="res://Sprite /piesas_GRRAS3.png" id="6_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bcwn13u3wus3x" path="res://Sprite /piesas_GRRAS6.png" id="6_606se"]
+[ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="8_ivps1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
 
@@ -18,6 +19,49 @@
 radius = 0.7011719
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4flbx"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_q13i1"]
+size = Vector2(0.05, 0.05)
+
+[sub_resource type="Curve" id="Curve_pylmc"]
+_data = [Vector2(0.054621853, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0.27551025), 0.0, 0.0, 0, 0, Vector2(1, 0.28089893), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
+atlas = ExtResource("8_ivps1")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
+atlas = ExtResource("8_ivps1")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
+atlas = ExtResource("8_ivps1")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
+atlas = ExtResource("8_ivps1")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_op7ga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwjto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_606se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1c27")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_4flbx"]
 length = 0.001
@@ -387,6 +431,54 @@ omni_range = 5.3488784
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1752992119]
 transform = Transform3D(0.345, 0, 0, 0, 0.6699164, 0, 0, 0, 0.329, 0.985, -0.88990104, -1.0111048)
 mesh = SubResource("CylinderMesh_4flbx")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Camera3D/MeshInstance3D" unique_id=1187482602]
+transform = Transform3D(2.603331, 0, 0, 0, 1.4016471, 0, 0, 0, 1.3231119, 0, 1.0739985, -0.17357373)
+visibility_range_end_margin = 7.8
+amount = 17
+lifetime = 1.7
+preprocess = 4.07
+speed_scale = 0.5
+mesh = SubResource("QuadMesh_q13i1")
+emission_shape = 3
+emission_box_extents = Vector3(0.2, 0.2, 0.2)
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 0.4
+angular_velocity_min = -6.64
+angular_velocity_max = 10.09
+angle_min = -36.1
+angle_max = 92.6
+scale_amount_min = 0.4
+scale_amount_max = 1.04
+scale_amount_curve = SubResource("Curve_pylmc")
+color = Color(0.4390491, 0.43904912, 0.43904912, 1)
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Camera3D/MeshInstance3D" unique_id=1991798068]
+transform = Transform3D(2.603331, 0, 0, 0, 1.4016471, 0, 0, 0, 1.3231119, 0, 1.2443142, -0.006225109)
+sprite_frames = SubResource("SpriteFrames_op7ga")
+autoplay = "default"
+frame_progress = 0.90150875
+
+[node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="Camera3D/MeshInstance3D" unique_id=1122051477]
+transform = Transform3D(1.8319446, 0, -0.9400775, 0, 1.4016471, 0, 1.849679, 0, 0.9310639, 0, 1.2443142, -0.0062248707)
+sprite_frames = SubResource("SpriteFrames_op7ga")
+autoplay = "default"
+frame_progress = 0.8104919
+
+[node name="AnimatedSprite3D3" type="AnimatedSprite3D" parent="Camera3D/MeshInstance3D" unique_id=1158126366]
+transform = Transform3D(0.27944168, 0, 1.3154675, 0, 1.4016471, 0, -2.5882902, 0, 0.14202288, 0, 1.2443142, -0.006225109)
+sprite_frames = SubResource("SpriteFrames_op7ga")
+autoplay = "default"
+frame_progress = 0.20816784
+
+[node name="AnimatedSprite3D4" type="AnimatedSprite3D" parent="Camera3D/MeshInstance3D" unique_id=1998181861]
+transform = Transform3D(-1.8639501, -0.09499122, -0.91932034, -0.26741216, 1.3941779, 0.011683752, 1.7976414, 0.108898945, -0.9514931, 0, 1.2443142, -0.0062248707)
+sprite_frames = SubResource("SpriteFrames_op7ga")
+autoplay = "default"
+frame_progress = 0.051989894
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1693618489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.14253452)

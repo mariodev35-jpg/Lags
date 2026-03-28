@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://sqbqey3p10ue"]
 
 [ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_ibjaa"]
-[ext_resource type="AudioStream" uid="uid://dt1xk6gqpfsuf" path="res://Musicas/musica caminos version 2.ogg" id="2_vl4cn"]
+[ext_resource type="AudioStream" uid="uid://dg85bwb5gu5xj" path="res://Musicas/musica caminos.ogg" id="2_uytli"]
 [ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="4_bwbs4"]
 [ext_resource type="PackedScene" uid="uid://squ400ecovdp" path="res://farola.tscn" id="5_bwbs4"]
 [ext_resource type="Material" uid="uid://5ojpom66w82n" path="res://Materiales/MaterialRoca.tres" id="6_js2t8"]
@@ -12,18 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://e4b7fu7ws7at" path="res://nexlevel.tscn" id="10_57qb2"]
 [ext_resource type="PackedScene" uid="uid://030o1v3wg8fl" path="res://barradecarga.tscn" id="11_vl4cn"]
 [ext_resource type="PackedScene" uid="uid://def2a3ewmx1dj" path="res://didmenu.tscn" id="12_js2t8"]
-[ext_resource type="PackedScene" uid="uid://bmaui8vh2x20n" path="res://oscul.tscn" id="13_uytli"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_uytli"]
-size = Vector3(44.760635, 9.10511, 18.91922)
+[ext_resource type="PackedScene" uid="uid://ga86f5m5wi7c" path="res://fogatasimple.tscn" id="13_uytli"]
 
 [node name="Node3D" type="Node3D" unique_id=1959826314]
 
-[node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_ibjaa")]
+[node name="player" parent="." unique_id=1580555560 node_paths=PackedStringArray("spawn_pos") instance=ExtResource("2_ibjaa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42033, 4.8439465, 37.140137)
+spawn_pos = NodePath("../Marker3D")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=136674342]
-stream = ExtResource("2_vl4cn")
+stream = ExtResource("2_uytli")
 autoplay = true
 bus = &"musicafondo"
 
@@ -74,15 +72,13 @@ transform = Transform3D(7.2497873, 0, 0, 0, 8.882424, 0, 0, 0, 0.35320333, 0, 0,
 
 [node name="Control" parent="." unique_id=1698534508 instance=ExtResource("12_js2t8")]
 
-[node name="Area3D2" parent="." unique_id=991904245 instance=ExtResource("13_uytli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8440595, 0, 29.07146)
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1077973696]
+transform = Transform3D(0.99039954, 0.08349141, 0.11017351, -0.07282146, 0.9925623, -0.097556055, -0.11749916, 0.08859647, 0.9891131, 3.487586, 4.421533, 36.852745)
 
-[node name="CollisionShape3D" parent="Area3D2" index="0" unique_id=901691573]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09899902, 0.76556396, -6.237608)
-shape = SubResource("BoxShape3D_uytli")
+[node name="lus" parent="." unique_id=1826984970 instance=ExtResource("13_uytli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0713613, 0.023419261, 15.400272)
 
 [connection signal="did" from="Control" to="player" method="_on_control_did"]
 
 [editable path="AnimatableBody3D"]
 [editable path="Area3D"]
-[editable path="Area3D2"]

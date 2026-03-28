@@ -7,9 +7,11 @@ func _process(delta: float) -> void:
 		Global.pausegame = false
 	if Global.pausegame == true:
 		show()
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		get_tree().paused = true
 	else:
 		hide()
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		get_tree().paused = false
 
 

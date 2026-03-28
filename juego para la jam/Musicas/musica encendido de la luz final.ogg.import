@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dako3vq40xgj5"
+path="res://.godot/imported/musica encendido de la luz final.ogg-be6c09b3f170f088351c089f6376f3e6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Musicas/musica encendido de la luz final.ogg"
+dest_files=["res://.godot/imported/musica encendido de la luz final.ogg-be6c09b3f170f088351c089f6376f3e6.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
