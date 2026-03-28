@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c662kgyxrxwm2" path="res://fogatasimple.gd" id="1_m8iw4"]
 [ext_resource type="AudioStream" uid="uid://b4d86xtpsh82w" path="res://Efectos de sonidos /Ambiente /crepitar fuego.ogg" id="2_wmtqq"]
+[ext_resource type="PackedScene" uid="uid://0mond8in7esu" path="res://3D/Fogata.tscn" id="3_ql2cf"]
+[ext_resource type="Texture2D" uid="uid://dxeodcdvve6ub" path="res://Sprite /piesa_icono_luz1.png" id="4_2aryq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m8iw4"]
 
@@ -15,10 +17,12 @@ metadata/_custom_type_script = "uid://ssbrhor7yy2x"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=207183452]
 transform = Transform3D(0.6606666, 0, 0, 0, 1, 0, 0, 0, 0.63638663, 0, 0, 0)
+visible = false
 mesh = SubResource("PlaneMesh_m8iw4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1118667745]
 transform = Transform3D(0.75833243, 0, 0, 0, 1, 0, 0, 0, 0.5872395, 0, 0.50399685, 0)
+visible = false
 mesh = SubResource("PrismMesh_wmtqq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2017451390]
@@ -27,3 +31,15 @@ shape = SubResource("BoxShape3D_ql2cf")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1711875772]
 stream = ExtResource("2_wmtqq")
+
+[node name="Fogata" parent="." unique_id=2081478465 instance=ExtResource("3_ql2cf")]
+
+[node name="AnimatedSprite3D" parent="Fogata" index="1" unique_id=305472753]
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=900257426]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.8214072, 0)
+billboard = 1
+texture = ExtResource("4_2aryq")
+
+[editable path="Fogata"]

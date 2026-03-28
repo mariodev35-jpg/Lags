@@ -10,7 +10,7 @@
 [node name="Mapa2" parent="." unique_id=1162004411 instance=ExtResource("1_55y45")]
 
 [node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_nwr2e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.214186, -5.2792315, 41.990257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.08812, 8.438925, -34.27226)
 
 [node name="CanvasLayer" parent="." unique_id=1289846114 instance=ExtResource("3_4f56f")]
 

@@ -11,11 +11,83 @@
 [ext_resource type="AudioStream" uid="uid://5hbu8dtn7ofc" path="res://Efectos de sonidos /Cesped/2  pasos pasto.ogg" id="6_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://cv2583cmbamy8" path="res://Sprite /piesas_GRRAS3.png" id="6_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://bcwn13u3wus3x" path="res://Sprite /piesas_GRRAS6.png" id="6_606se"]
+[ext_resource type="Material" uid="uid://b2is11seiinc" path="res://Materiales/MaterialMaderaAntorcha.tres" id="8_urp6f"]
+[ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="9_bwjto"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sh265"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 radius = 0.7011719
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1or0k"]
+_surfaces = [{
+"aabb": AABB(-0.93471915, -8.00978, -0.8985702, 1.8373759, 15.339322, 1.7882276),
+"format": 34896613377,
+"index_count": 126,
+"index_data": PackedByteArray("AgAMAAoADQAKAAwADAAOAA0ADQAOAAoADAABAA4AAgABAAwADgAFAAoADgAPAAUADgABAA8ACgAFAAsACwADAAoACgADAAIABQAQAAsADwAQAAUAEAAJAAsACwAJAAMAEAAPABEACQAQABEAEQAPABIADwABABIAEQATAAkACQATAAMAEQASAAAAEQAAABMAEwAAAAgAAwATABQAFAATAAgAAwAUAAQACAAEABQAAAAEAAgAAwAEAAIAAAASAAYAAAAGAAQAEgAVAAYAEgABABUABAAGABYABAAWAAIABgAVABYABwABAAIABwAVAAEAFgAHAAIAFgAVAAcA"),
+"lods": [2.4323227, PackedByteArray("AwAEAAIABAAHAAIABgAHAAQABwABAAIABgABAAcAAAAGAAQAAAABAAYAAAAEAAgACAAEAAMABQABAAAAAgABAAUACQAAAAgAAwAJAAgACQAFAAAACgADAAIAAgAFAAoACwAJAAMABQAJAAsACwADAAoACgAFAAsA"), 3.9223104, PackedByteArray("AwAEAAIAAgAFAAMAAwAAAAQABQAAAAMAAgABAAUABQABAAAABAABAAIAAAABAAYABgABAAQAAAAGAAQA"), 5.8834653, PackedByteArray("AAABAAIAAgABAAMAAQAAAAMAAwAAAAIA")],
+"name": "MaterialMaderaAntorcha",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 23,
+"vertex_data": PackedByteArray("Qf1ZATyVAACuFKoAALsAAJAt8/8p3wAAp9P//wUhAABA2Of/+tkAAD00IwXZDwAAr8qABHLwAADFM04FofAAAP//hfuWmgAAkcz7BJoPAABnKNn/YyYAAEFllP4AAAAA2Q1W/1OuAAC0A5b8G2IAAAAAwgRYYwAABiUKAFI7AACrgMoAUAMAAIHNAABzLQAAhMMMADDeAAAq92sE5ksAAH7zVv+iUQAArHz1AIr8AAC5m4f+//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tfiug"]
+resource_name = "Antorcha_Cube_002"
+_surfaces = [{
+"aabb": AABB(-0.93471915, -8.00978, -0.8985702, 1.8373759, 15.339322, 1.7882276),
+"attribute_data": PackedByteArray("xF6NWv9fYACyn54FCqdBgB1gh/O/n7L+IKJcQMbdskH+YLy4YaCEQ+Bg/zdiITJBIN7efQOfnafhYHWHUJ8rWDpgNAdgnzXEGKCkhP9f//9znw7s42B71xJgesbEnijXPGDon2Vf0oBxYP9v/6AObOleOTrvWal+VSGFehKfZydkYKYbpl9NNw=="),
+"format": 34896613399,
+"index_count": 126,
+"index_data": PackedByteArray("BQAUABEABQAEABQAEwAEAAUAFAAEABUAFQAEABYAFAAVABcAFwARABQAFwAVABEAFQAIABEAFQAWAAgAEQAIAA0ADQASABEAFgAYAAgACAAYAA0AGAAWABkAGAAOAA0ADgAYABkADQAOAAMAGQAaAA4ADgAaAAMAGQAAABoAAwAGAAcADAADAAcAAwAaABsAGwAaAA8AGgAAAA8AAwAbAAkADwAJABsAAAAJAA8AAAAKAAkAAAAcAAoAHQAcAAAAHQAeABwAHgALABwACQAKAB8ACQAfAAIAHwAQAAIACgAgAB8AHwAgABAAIQAgAAoAEAAgAAEAIQABACAA"),
+"lods": [2.4323227, PackedByteArray("AwAGAAcADAADAAcADQAOAAMAAwAOAA8ADwAJAAMADgAAAA8AAAAJAA8AAAAKAAkAAAALAAoACgAQAAkACQAQAAIACgABABAADgAIAAAACAAOAA0ACAAEAAAAEQAIAA0ADQASABEABQAIABEABQAEAAgAEwAEAAUA"), 3.9223104, PackedByteArray("AwAGAAcABQAIAAMABQAEAAgACAAEAAAACAAAAAMAAwAAAAkAAAAKAAkAAAALAAoACgABAAkACQABAAIA"), 5.8834653, PackedByteArray("AAABAAIAAwAAAAIABAAAAAMABQAEAAMA")],
+"material": ExtResource("8_urp6f"),
+"name": "MaterialMaderaAntorcha",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("Qf1ZATyVh8WuFKoAALu5wJAt8/8p397Ep9P//wUhr/+uFKoAALui3pAt8/8p3826QNjn//rZf/eQLfP/Kd/I9z00IwXZD+/0QNjn//rZNNavyoAEcvCqwq4UqgAAu3a0ZyjZ/2MmgOtBZZT+AACY7JHM+wSaD2Xq//+F+5aa0NXFM04FofA2vWco2f9jJkXWp9P//wUhmezFM04FofBCxtkNVv9TrmLDAADCBFhja+AGJQoAUju0/7QDlvwbYnLTq4DKAFADNe2BzQAAcy1P0Sr3awTmSy7XfvNW/6JRn+6EwwwAMN4otIHNAABzLYbTBiUKAFI7cNK5m4f+//9wyqx89QCK/Me8hMMMADDes8dnHOg8lEDu77T5+TKEpzm3CM578eP9r8ShIrcVvm0PoYPI6cxRMhQEWxE5IFpAVaw4dODNPcAgtQg4nzzvK/YgLtsS86LNa7bDxHecWeBQ8DzodMIg0drYFF6aTMbVU8pRSkZJnjuoTTYwXjWNM8QfGAWATpcMtF6aKAWS5OT0DYAbl+K/EDvM")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1or0k")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcy7u"]
+atlas = ExtResource("9_bwjto")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbgtd"]
+atlas = ExtResource("9_bwjto")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye17o"]
+atlas = ExtResource("9_bwjto")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wojyf"]
+atlas = ExtResource("9_bwjto")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_606se"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcy7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbgtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye17o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wojyf")
+}],
+"loop": true,
+"name": &"Encender",
+"speed": 5.0
+}]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4flbx"]
 
@@ -384,8 +456,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.40773195, -0.91094327)
 light_energy = 2.6
 omni_range = 5.3488784
 
+[node name="Antorcha" type="Node3D" parent="Camera3D" unique_id=1585612465]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.9397497, -0.93673956, -1.0093606)
+
+[node name="Base" type="MeshInstance3D" parent="Camera3D/Antorcha" unique_id=636549850]
+transform = Transform3D(0.18865383, 0, 0, 0, 0.14848253, 0, 0, 0, 0.18865383, 0.0021121402, -0.039252043, 0.00086344586)
+mesh = SubResource("ArrayMesh_tfiug")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Camera3D/Antorcha" unique_id=1492482852]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.7546215, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_606se")
+animation = &"Encender"
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1752992119]
 transform = Transform3D(0.345, 0, 0, 0, 0.6699164, 0, 0, 0, 0.329, 0.985, -0.88990104, -1.0111048)
+visible = false
 mesh = SubResource("CylinderMesh_4flbx")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1693618489]

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://0mond8in7esu"]
+
+[ext_resource type="PackedScene" uid="uid://ovfelsu88oii" path="res://Modelos/Fogata.glb" id="1_pa2w0"]
+[ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="2_hb1h8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcy7u"]
+atlas = ExtResource("2_hb1h8")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbgtd"]
+atlas = ExtResource("2_hb1h8")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye17o"]
+atlas = ExtResource("2_hb1h8")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wojyf"]
+atlas = ExtResource("2_hb1h8")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptr0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcy7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbgtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye17o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wojyf")
+}],
+"loop": true,
+"name": &"Encender",
+"speed": 5.0
+}]
+
+[node name="Fogata" type="Node3D" unique_id=2081478465]
+
+[node name="Fogata2" parent="." unique_id=96577218 instance=ExtResource("1_pa2w0")]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=305472753]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.0401049, 0)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_ptr0t")
+animation = &"Encender"
+frame_progress = 0.53932047

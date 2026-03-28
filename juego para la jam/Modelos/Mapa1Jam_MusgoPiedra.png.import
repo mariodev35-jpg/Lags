@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvw10kfs36sn0"
-path.etc2="res://.godot/imported/Mapa1Jam_MusgoPiedra.png-65c8268a8b8b13a73bd649be5eba6244.etc2.ctex"
+path.s3tc="res://.godot/imported/Mapa1Jam_MusgoPiedra.png-65c8268a8b8b13a73bd649be5eba6244.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Modelos/Mapa1Jam_MusgoPiedra.png"
-dest_files=["res://.godot/imported/Mapa1Jam_MusgoPiedra.png-65c8268a8b8b13a73bd649be5eba6244.etc2.ctex"]
+dest_files=["res://.godot/imported/Mapa1Jam_MusgoPiedra.png-65c8268a8b8b13a73bd649be5eba6244.s3tc.ctex"]
 
 [params]
 

@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://cbrknxo1ydril" path="res://Materiales/MaterialTronco.tres" id="3_xsqtg"]
 [ext_resource type="Material" uid="uid://biq5e6s63lkc" path="res://Materiales/MaterialHojas.tres" id="4_wfv52"]
 [ext_resource type="PackedScene" uid="uid://fhrfren6dq63" path="res://3D/CasaConInterior.tscn" id="5_xsqtg"]
+[ext_resource type="PackedScene" uid="uid://ga86f5m5wi7c" path="res://fogatasimple.tscn" id="6_wfv52"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ncphg"]
 points = PackedVector3Array(-0.9286635, -1.6846642, -5.946642, 0.8948095, -1.5773802, -4.0155277, 0.8948095, -1.6846642, -4.0155277, 0.8948095, -1.5773802, -5.946642, -0.9286635, -1.5773802, -4.0155277, -0.9286635, -1.6846642, -4.0155277, 0.8948095, -1.6846642, -5.946642, -0.9286635, -1.5773802, -5.946642)
@@ -96,41 +97,41 @@ buffer = PackedFloat32Array(0.501, 0, 0, -28.782799, 0, 0.501, 0, -6.5823174, 0,
 [node name="Mapa2Jam" parent="." unique_id=375866950 instance=ExtResource("1_0lbwi")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Cubo_002" parent="Mapa2Jam" index="4" unique_id=421208948]
+[node name="Cubo_002" parent="Mapa2Jam" index="4" unique_id=1076503581]
 visible = false
 
-[node name="Cubo_009" parent="Mapa2Jam" index="5" unique_id=1934227223]
+[node name="Cubo_009" parent="Mapa2Jam" index="5" unique_id=310692314]
 visible = false
 
-[node name="Cubo_010" parent="Mapa2Jam" index="6" unique_id=1812268415]
+[node name="Cubo_010" parent="Mapa2Jam" index="6" unique_id=507245019]
 visible = false
 
-[node name="Cubo_011" parent="Mapa2Jam" index="7" unique_id=753408722]
+[node name="Cubo_011" parent="Mapa2Jam" index="7" unique_id=1609622329]
 visible = false
 
-[node name="Cubo_012" parent="Mapa2Jam" index="10" unique_id=1983666331]
+[node name="Cubo_012" parent="Mapa2Jam" index="10" unique_id=111164559]
 visible = false
 
-[node name="Cubo_013" parent="Mapa2Jam" index="12" unique_id=249794819]
+[node name="Cubo_013" parent="Mapa2Jam" index="12" unique_id=1370796109]
 visible = false
 
-[node name="Cubo_015" parent="Mapa2Jam" index="22" unique_id=1594631577]
+[node name="Cubo_015" parent="Mapa2Jam" index="22" unique_id=1649781224]
 visible = false
 
-[node name="Cubo_016" parent="Mapa2Jam" index="24" unique_id=479004114]
+[node name="Cubo_016" parent="Mapa2Jam" index="24" unique_id=1567912109]
 visible = false
 
-[node name="Cubo_017" parent="Mapa2Jam" index="26" unique_id=2089712378]
+[node name="Cubo_017" parent="Mapa2Jam" index="26" unique_id=24727684]
 visible = false
 
-[node name="Cubo_018" parent="Mapa2Jam" index="28" unique_id=175966506]
+[node name="Cubo_018" parent="Mapa2Jam" index="28" unique_id=2134454873]
 transform = Transform3D(-4.0110917, 0, -1.821242e-07, 0, 1, 0, 1.3069796e-06, 0, -0.55893517, -1.5589492, -0.76528865, 0.52529836)
 visible = false
 
-[node name="Cubo_019" parent="Mapa2Jam" index="30" unique_id=2035552690]
+[node name="Cubo_019" parent="Mapa2Jam" index="30" unique_id=1651736988]
 visible = false
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_007" parent_id_path=PackedInt32Array(375866950, 860248914) index="1" unique_id=373131994]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_007" parent_id_path=PackedInt32Array(375866950, 457366823) index="1" unique_id=373131994]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=446244359]
 shape = SubResource("ConvexPolygonShape3D_ncphg")
@@ -144,10 +145,10 @@ shape = SubResource("ConvexPolygonShape3D_abhr5")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Mapa2Jam/Pared_007/StaticBody3D2" unique_id=585544522]
 shape = SubResource("ConvexPolygonShape3D_xsqtg")
 
-[node name="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D" parent_id_path=PackedInt32Array(375866950, 417444042) index="0" unique_id=506721751]
+[node name="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D" parent_id_path=PackedInt32Array(375866950, 1292645976) index="0" unique_id=1657986336]
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_011" parent_id_path=PackedInt32Array(375866950, 474256749) index="1" unique_id=1100830054]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Mapa2Jam/Pared_011" parent_id_path=PackedInt32Array(375866950, 1715312315) index="1" unique_id=1100830054]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa2Jam/Pared_011/StaticBody3D2" unique_id=604826670]
 shape = SubResource("ConvexPolygonShape3D_wfv52")
@@ -155,7 +156,7 @@ shape = SubResource("ConvexPolygonShape3D_wfv52")
 [node name="Arbol" parent="." unique_id=991158630 instance=ExtResource("2_abhr5")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.772736, -2.8286057, -34.281628)
 
-[node name="Arbol" parent="Arbol/Arbol Pixel" parent_id_path=PackedInt32Array(991158630, 459819919) index="0" unique_id=2080000410]
+[node name="Arbol" parent="Arbol/Arbol Pixel" parent_id_path=PackedInt32Array(991158630, 459819919) index="0" unique_id=1753880115]
 transform = Transform3D(1, 0, 0, 0, 5.4463925, 0, 0, 0, 1, 0, -2.7559881, 0)
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=934248750]
@@ -198,6 +199,15 @@ transform = Transform3D(-0.7499997, 0, -0.0007067858, 0, 0.75, 0, 0.0007067858, 
 
 [node name="CasaConInterior10" parent="." unique_id=1919783359 instance=ExtResource("5_xsqtg")]
 transform = Transform3D(-0.7499997, 0, -0.0007067858, 0, 0.75, 0, 0.0007067858, 0, -0.7499997, -19.81548, -3.1821203, 38.820015)
+
+[node name="lus" parent="." unique_id=1826984970 instance=ExtResource("6_wfv52")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 16.6002, -6.153762, 28.46598)
+
+[node name="lus2" parent="." unique_id=235528690 instance=ExtResource("6_wfv52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.140678, 6.3900146, -20.225317)
+
+[node name="lus3" parent="." unique_id=393242264 instance=ExtResource("6_wfv52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7162437, 6.3900146, -20.225317)
 
 [editable path="Mapa2Jam"]
 [editable path="Arbol"]
