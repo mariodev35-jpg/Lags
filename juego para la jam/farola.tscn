@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0f04nlmaxod1" path="res://farole.gd" id="1_m25s7"]
 [ext_resource type="AudioStream" uid="uid://by3y7hu5b1fip" path="res://Efectos de sonidos /Ambiente /encendido fuego.ogg" id="2_v2p15"]
 [ext_resource type="Texture2D" uid="uid://dxeodcdvve6ub" path="res://Sprite /piesa_icono_luz1.png" id="3_7ka3t"]
+[ext_resource type="AudioStream" uid="uid://b4d86xtpsh82w" path="res://Efectos de sonidos /Ambiente /crepitar fuego.ogg" id="3_rcy7u"]
 [ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="4_wlayv"]
 [ext_resource type="PackedScene" uid="uid://ceh4a3hiqyvip" path="res://Modelos/Antorcha.glb" id="5_wlayv"]
 
@@ -69,6 +70,10 @@ omni_range = 10.0
 stream = ExtResource("2_v2p15")
 pitch_scale = 1.5
 bus = &"efectssounds"
+
+[node name="AudioFuegoCrepitando" type="AudioStreamPlayer3D" parent="." unique_id=699633470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3295898, 0)
+stream = ExtResource("3_rcy7u")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1276866531]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.8214072, 0)

@@ -19,5 +19,16 @@ func use():
 		$AnimatedSprite3D.play("Encender")
 		$AnimatedSprite3D.visible = true
 		$Antorcha/Base_001.visible = false
+		
+		if has_node("AudioFuegoCrepitando"):
+			$AudioFuegoCrepitando.play()
 	else:
 		$OmniLight3D.hide()
+		
+		$Sprite3D.visible = true
+		$AnimatedSprite3D.stop()
+		$AnimatedSprite3D.visible = false
+		$Antorcha/Base_001.visible = true
+		
+		if has_node("AudioFuegoCrepitando"):
+			$AudioFuegoCrepitando.stop()
