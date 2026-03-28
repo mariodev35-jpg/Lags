@@ -161,20 +161,39 @@ func BorrarMensaje():
 	$Carta.text = ""
 
 func MostrarCarta1():
-	var a ="Carta1:\n\n" 
+	var a ="Carta 1:\n\n" 
 	a = a+"Si alguien encuentra esto…\nlas luces no se apagaron solas.\n\nAl principio dejamos de encender algunas."
 
 	EscribirMensaje(a);
 
 func MostrarCarta2():
-	var a = "Carta2:\n\n" 
+	var a = "Carta 2:\n\n" 
 	a= a + "Pensamos que no importaba,\nque podíamos ocuparnos de todo después."
 
 	EscribirMensaje(a);
 
 func MostrarCarta3():
-	var a = "Carta3:\n\n"
+	var a = "Carta 3:\n\n"
 	a=a+"Pero los caminos empezaron a desaparecer.\nLas casas quedaron en silencio.\nY algo empezó a crecer en la oscuridad."
+
+	EscribirMensaje(a);
+
+func MostrarCarta4():
+	var a = "Carta 4:\n\n"
+	a=a+"Ahora entiendo que no era solo la falta de luz.\nEra el olvido."
+
+	EscribirMensaje(a);
+
+func MostrarCarta5():
+	var a = "Carta 5:\n\n"
+	a=a+"Si todavía queda una chispa…\nNo intentes salvarlo todo."
+
+	EscribirMensaje(a);
+
+
+func MostrarCarta6():
+	var a = "Carta 6:\n\n"
+	a=a+"Mantén viva una luz"
 
 	EscribirMensaje(a);
 
@@ -196,3 +215,18 @@ func _on_area_carta_2_body_entered(body: Node3D) -> void:
 func _on_area_carta_3_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		MostrarCarta3()
+
+
+func _on_area_carta_4_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		MostrarCarta4()
+
+
+func _on_area_carta_5_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		MostrarCarta5()
+
+
+func _on_area_carta_6_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		MostrarCarta6()

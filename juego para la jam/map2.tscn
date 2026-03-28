@@ -4,6 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_nwr2e"]
 [ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="3_4f56f"]
 [ext_resource type="PackedScene" uid="uid://def2a3ewmx1dj" path="res://didmenu.tscn" id="4_nwr2e"]
+[ext_resource type="ArrayOccluder3D" uid="uid://bmbpum8dbt4wt" path="res://map2.occ" id="5_4f56f"]
+[ext_resource type="PackedScene" uid="uid://e4b7fu7ws7at" path="res://nexlevel.tscn" id="6_dt2mv"]
+[ext_resource type="PackedScene" uid="uid://030o1v3wg8fl" path="res://barradecarga.tscn" id="7_n8cy1"]
+[ext_resource type="Material" uid="uid://5ojpom66w82n" path="res://Materiales/MaterialRoca.tres" id="8_aqkjv"]
 
 [node name="Node3D" type="Node3D" unique_id=1475138755]
 
@@ -19,4 +23,21 @@ bus = &"musicafondo"
 
 [node name="Control" parent="." unique_id=1698534508 instance=ExtResource("4_nwr2e")]
 
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=1145576798]
+occluder = ExtResource("5_4f56f")
+
+[node name="Area3D" parent="." unique_id=1586055141 instance=ExtResource("6_dt2mv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.381107, -7.886776, -35.95658)
+nexesene = ExtResource("7_n8cy1")
+escen = "res://map3.tscn"
+
+[node name="MeshInstance3D" parent="Area3D" index="0" unique_id=1214393749]
+transform = Transform3D(9.775446, 0, 0, 0, 8.882424, 0, 0, 0, 0.35320333, 0, 0, 1.2204704)
+surface_material_override/0 = ExtResource("8_aqkjv")
+
+[node name="CollisionShape3D" parent="Area3D" index="1" unique_id=364638850]
+transform = Transform3D(7.248901, 0, 0.0055232216, 0, 8.882423, 0, -0.113368645, 0, 0.35316014, 0.26543045, 0, 0.9401245)
+
 [connection signal="did" from="Control" to="player" method="_on_control_did"]
+
+[editable path="Area3D"]
