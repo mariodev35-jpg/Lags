@@ -151,3 +151,48 @@ func _on_suelodetect_body_entered(body: Node3D) -> void:
 
 func _on_control_did() -> void:
 	did()
+	
+func EscribirMensaje(texto:String):
+	$Carta.visible = true
+	$Carta.text = texto
+
+func BorrarMensaje():
+	$Carta.visible = false
+	$Carta.text = ""
+
+func MostrarCarta1():
+	var a ="Carta1:\n\n" 
+	a = a+"Si alguien encuentra esto…\nlas luces no se apagaron solas.\n\nAl principio dejamos de encender algunas."
+
+	EscribirMensaje(a);
+
+func MostrarCarta2():
+	var a = "Carta2:\n\n" 
+	a= a + "Pensamos que no importaba,\nque podíamos ocuparnos de todo después."
+
+	EscribirMensaje(a);
+
+func MostrarCarta3():
+	var a = "Carta3:\n\n"
+	a=a+"Pero los caminos empezaron a desaparecer.\nLas casas quedaron en silencio.\nY algo empezó a crecer en la oscuridad."
+
+	EscribirMensaje(a);
+
+
+func _on_area_carta_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		MostrarCarta1()
+
+
+func _on_area_carta_body_exited(body: Node3D) -> void:
+	BorrarMensaje()
+
+
+func _on_area_carta_2_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		MostrarCarta2()
+
+
+func _on_area_carta_3_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		MostrarCarta3()

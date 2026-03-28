@@ -1,9 +1,47 @@
 [gd_scene format=3 uid="uid://ga86f5m5wi7c"]
 
 [ext_resource type="Script" uid="uid://c662kgyxrxwm2" path="res://fogatasimple.gd" id="1_m8iw4"]
+[ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="2_jel3a"]
 [ext_resource type="AudioStream" uid="uid://b4d86xtpsh82w" path="res://Efectos de sonidos /Ambiente /crepitar fuego.ogg" id="2_wmtqq"]
+[ext_resource type="AudioStream" uid="uid://by3y7hu5b1fip" path="res://Efectos de sonidos /Ambiente /encendido fuego.ogg" id="3_2725b"]
 [ext_resource type="PackedScene" uid="uid://0mond8in7esu" path="res://3D/Fogata.tscn" id="3_ql2cf"]
 [ext_resource type="Texture2D" uid="uid://dxeodcdvve6ub" path="res://Sprite /piesa_icono_luz1.png" id="4_2aryq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcy7u"]
+atlas = ExtResource("2_jel3a")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbgtd"]
+atlas = ExtResource("2_jel3a")
+region = Rect2(32, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye17o"]
+atlas = ExtResource("2_jel3a")
+region = Rect2(64, 0, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wojyf"]
+atlas = ExtResource("2_jel3a")
+region = Rect2(96, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptr0t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcy7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbgtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye17o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wojyf")
+}],
+"loop": true,
+"name": &"Encender",
+"speed": 5.0
+}]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m8iw4"]
 
@@ -14,6 +52,16 @@
 [node name="lus" type="StaticBody3D" unique_id=1826984970 groups=["inter", "lus"]]
 script = ExtResource("1_m8iw4")
 metadata/_custom_type_script = "uid://ssbrhor7yy2x"
+
+[node name="Fogata" parent="." unique_id=2081478465 instance=ExtResource("3_ql2cf")]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=305472753]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.0401049, 0)
+visible = false
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_ptr0t")
+animation = &"Encender"
+frame_progress = 0.53932047
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=207183452]
 transform = Transform3D(0.6606666, 0, 0, 0, 1, 0, 0, 0, 0.63638663, 0, 0, 0)
@@ -32,14 +80,19 @@ shape = SubResource("BoxShape3D_ql2cf")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1711875772]
 stream = ExtResource("2_wmtqq")
 
-[node name="Fogata" parent="." unique_id=2081478465 instance=ExtResource("3_ql2cf")]
-
-[node name="AnimatedSprite3D" parent="Fogata" index="1" unique_id=305472753]
-visible = false
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1845577177]
+stream = ExtResource("3_2725b")
+pitch_scale = 1.5
+bus = &"efectssounds"
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=900257426]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.8214072, 0)
 billboard = 1
 texture = ExtResource("4_2aryq")
 
-[editable path="Fogata"]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=618660886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3751545, 0)
+visible = false
+light_color = Color(1, 0.2784314, 0.03529412, 1)
+light_energy = 3.032
+omni_range = 10.0

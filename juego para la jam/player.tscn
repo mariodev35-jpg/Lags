@@ -434,7 +434,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_1jxqw"]
 size = Vector3(0.1, 0.1, 0.1)
 
-[node name="player" type="CharacterBody3D" unique_id=1580555560]
+[node name="player" type="CharacterBody3D" unique_id=1580555560 groups=["player"]]
 script = ExtResource("1_4flbx")
 gara = [ExtResource("2_nvl01"), ExtResource("3_ivps1"), ExtResource("4_urp6f"), ExtResource("5_bwjto"), ExtResource("6_606se")]
 
@@ -531,6 +531,10 @@ offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_2hs0m")
+
+[node name="Carta" type="Label3D" parent="." unique_id=1564027106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3706839, 1.07936, -2.9034567)
+billboard = 1
 
 [connection signal="body_entered" from="interazone" to="." method="_on_interazone_body_entered"]
 [connection signal="body_exited" from="interazone" to="." method="_on_interazone_body_exited"]
