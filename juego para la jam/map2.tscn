@@ -12,8 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://ga86f5m5wi7c" path="res://fogatasimple.tscn" id="9_n8cy1"]
 [ext_resource type="PackedScene" uid="uid://squ400ecovdp" path="res://farola.tscn" id="10_aqkjv"]
 [ext_resource type="PackedScene" uid="uid://bmaui8vh2x20n" path="res://oscul.tscn" id="11_dayf4"]
-[ext_resource type="PackedScene" uid="uid://dad6os626kjt6" path="res://palanca.tscn" id="13_6is1d"]
-[ext_resource type="PackedScene" uid="uid://e4b7fu7ws7at" path="res://nexlevel.tscn" id="14_4m3po"]
 
 [node name="Node3D" type="Node3D" unique_id=1475138755]
 
@@ -67,28 +65,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.597265, 6.154255, -26.249
 [node name="CollisionShape3D" parent="Area3D2" index="0" unique_id=901691573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.657494, 1.0412359, 29.436577)
 
-[node name="lus2" parent="." unique_id=2115095692 instance=ExtResource("9_n8cy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.709854, -6.0719957, -33.607246)
-
-[node name="AnimatableBody3D2" parent="." unique_id=1183748085 instance=ExtResource("8_dt2mv")]
-transform = Transform3D(-0.08282564, 0, 0.99656403, 0, 1, 0, -0.99656403, 0, -0.08282564, 0, -5.028202, 5.592757)
-
-[node name="MeshInstance3D" parent="AnimatableBody3D2" index="0" unique_id=1581118574]
-transform = Transform3D(6.651446, 0, 0, 0, 3.1836965, 0, -2.3841858e-07, 0, 0.4061108, 0, 0.5036731, 0)
-
-[node name="CollisionShape3D" parent="AnimatableBody3D2" index="1" unique_id=2104153548]
-transform = Transform3D(6.6514454, 0, -9.313226e-10, 0, 3.1836965, 0, -1.7881393e-07, 0, 0.14221999, 0, -0.3271861, 0)
-
-[node name="StaticBody3D" parent="." unique_id=1401758132 node_paths=PackedStringArray("obje") instance=ExtResource("13_6is1d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.04046, -5.9588847, -5.546103)
-obje = NodePath("../AnimatableBody3D2")
-
-[node name="Area3D3" parent="." unique_id=1586055141 instance=ExtResource("14_4m3po")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.92796, -3.7881818, 43.604336)
-
 [connection signal="did" from="Control" to="player" method="_on_control_did"]
 [connection signal="did" from="Control3" to="player" method="_on_control_3_did"]
 
 [editable path="AnimatableBody3D"]
 [editable path="Area3D2"]
-[editable path="AnimatableBody3D2"]
