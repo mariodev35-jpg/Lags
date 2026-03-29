@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bru6qovlxemmo"
-path.s3tc="res://.godot/imported/Fogata_ArbolCortezaPixel.png-629e5e39544dd4870bdf3b67c1221f6c.s3tc.ctex"
+path.etc2="res://.godot/imported/Fogata_ArbolCortezaPixel.png-629e5e39544dd4870bdf3b67c1221f6c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Modelos/Fogata_ArbolCortezaPixel.png"
-dest_files=["res://.godot/imported/Fogata_ArbolCortezaPixel.png-629e5e39544dd4870bdf3b67c1221f6c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Fogata_ArbolCortezaPixel.png-629e5e39544dd4870bdf3b67c1221f6c.etc2.ctex"]
 
 [params]
 

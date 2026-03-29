@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doipgo70scu7n"
-path.s3tc="res://.godot/imported/Mapa2Jam_ParedSoloPiedraPixel.png-ec887c6d22743dc4a5aecf29308b5392.s3tc.ctex"
+path.etc2="res://.godot/imported/Mapa2Jam_ParedSoloPiedraPixel.png-ec887c6d22743dc4a5aecf29308b5392.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +15,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Modelos/Mapa2Jam_ParedSoloPiedraPixel.png"
-dest_files=["res://.godot/imported/Mapa2Jam_ParedSoloPiedraPixel.png-ec887c6d22743dc4a5aecf29308b5392.s3tc.ctex"]
+dest_files=["res://.godot/imported/Mapa2Jam_ParedSoloPiedraPixel.png-ec887c6d22743dc4a5aecf29308b5392.etc2.ctex"]
 
 [params]
 
