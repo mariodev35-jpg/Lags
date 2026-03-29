@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bq4bakrm45jns"]
+
+[ext_resource type="PackedScene" uid="uid://bypssojronade" path="res://3D/Mapa3.tscn" id="1_toabr"]
+[ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_tygii"]
+[ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="3_f5b5g"]
+[ext_resource type="PackedScene" uid="uid://def2a3ewmx1dj" path="res://didmenu.tscn" id="4_xssoo"]
+[ext_resource type="ArrayOccluder3D" uid="uid://826f7t5t4s0v" path="res://map3.occ" id="5_tygii"]
+
+[node name="Node3D" type="Node3D" unique_id=1475138755]
+
+[node name="Mapa3" parent="." unique_id=1043606636 instance=ExtResource("1_toabr")]
+
+[node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_tygii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.850266, 22.674887, 52.79488)
+
+[node name="CanvasLayer" parent="." unique_id=1289846114 instance=ExtResource("3_f5b5g")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=731325001]
+bus = &"musicafondo"
+
+[node name="Control" parent="." unique_id=1698534508 instance=ExtResource("4_xssoo")]
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=239826643]
+occluder = ExtResource("5_tygii")
+
+[connection signal="did" from="Control" to="player" method="_on_control_did"]

@@ -15,6 +15,7 @@ const JUMP_VELOCITY = 4.0
 @export var gara = []
 func _ready() -> void:
 	$garraso.texture = gara.pick_random()
+	$Camera3D/Antorcha/AnimatedSprite3D.play("Encender")
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventScreenDrag and event.position.x >= 620 or event is InputEventMouseMotion :

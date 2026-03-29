@@ -8,12 +8,12 @@ func use():
 		$AnimationPlayer.play("play")
 	else:
 		$AnimationPlayer.play("desplay")
-
-func _process(delta: float) -> void:
+		
 	if pres == true:
 		obje.press()
 	else:
 		obje.despress()
+	
 func visi():
 	$Sprite3D.show()
 func invisi():

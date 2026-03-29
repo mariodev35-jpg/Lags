@@ -12,7 +12,7 @@ func use():
 	$AudioStreamPlayer.stream = sound
 	$AudioStreamPlayer.playing = true
 	encendido = true
-func _process(delta: float) -> void:
+	
 	if encendido == true:
 		var tewn = create_tween()
 		tewn.tween_property($OmniLight3D,"range",1,1.5)
@@ -20,6 +20,25 @@ func _process(delta: float) -> void:
 		$Sprite3D.visible = false
 		$AnimatedSprite3D.play("Encender")
 		$AnimatedSprite3D.visible = true
-		$Antorcha/Base_001.visible = false
+		if has_node("Antorcha/Base_001"):
+			$Antorcha/Base_001.visible = false
+		
+		if has_node("AudioFuegoCrepitando"):
+			$AudioFuegoCrepitando.play()
+		
+		if name == "farola3" && get_parent().name =="map1":
+			get_parent().get_node("StaticBody3D").visible = true
+		
+		
+		
 	else:
 		$OmniLight3D.hide()
+		
+		$Sprite3D.visible = true
+		$AnimatedSprite3D.stop()
+		$AnimatedSprite3D.visible = false
+		if has_node("Antorcha/Base_001"):
+			$Antorcha/Base_001.visible = true
+		
+		if has_node("AudioFuegoCrepitando"):
+			$AudioFuegoCrepitando.stop()

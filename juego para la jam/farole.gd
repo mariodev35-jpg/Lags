@@ -1,5 +1,6 @@
 extends lus
 
+
 func press():
 	$AudioStreamPlayer.pitch_scale = 1.5
 	

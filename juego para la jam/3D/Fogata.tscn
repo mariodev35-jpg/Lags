@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://0mond8in7esu"]
+
+[ext_resource type="PackedScene" uid="uid://ovfelsu88oii" path="res://Modelos/Fogata.glb" id="1_pa2w0"]
+
+[node name="Fogata" type="Node3D" unique_id=2081478465]
+
+[node name="Fogata2" parent="." unique_id=96577218 instance=ExtResource("1_pa2w0")]
