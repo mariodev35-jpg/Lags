@@ -4,69 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://crpualumjwf" path="res://player.tscn" id="2_nwr2e"]
 [ext_resource type="PackedScene" uid="uid://p75c6u6u6p2x" path="res://ui.tscn" id="3_4f56f"]
 [ext_resource type="PackedScene" uid="uid://def2a3ewmx1dj" path="res://didmenu.tscn" id="4_nwr2e"]
-[ext_resource type="AudioStream" uid="uid://6gyh4tcxe8dr" path="res://Musicas/musica murmullo finito pueblo.ogg" id="4_pekqs"]
-[ext_resource type="PackedScene" uid="uid://cnuvi1dakx7nm" path="res://box.tscn" id="5_4f56f"]
-[ext_resource type="PackedScene" uid="uid://cjiyu2w87r7s5" path="res://placpres.tscn" id="6_ehxak"]
-[ext_resource type="PackedScene" uid="uid://dj1ajhpvae8od" path="res://menupausa.tscn" id="7_ky2co"]
-[ext_resource type="PackedScene" uid="uid://d3db1ecasv2nv" path="res://door.tscn" id="8_dt2mv"]
-[ext_resource type="PackedScene" uid="uid://ga86f5m5wi7c" path="res://fogatasimple.tscn" id="9_n8cy1"]
-[ext_resource type="PackedScene" uid="uid://squ400ecovdp" path="res://farola.tscn" id="10_aqkjv"]
-[ext_resource type="PackedScene" uid="uid://bmaui8vh2x20n" path="res://oscul.tscn" id="11_dayf4"]
 
 [node name="Node3D" type="Node3D" unique_id=1475138755]
 
 [node name="Mapa2" parent="." unique_id=1162004411 instance=ExtResource("1_55y45")]
 
-[node name="player" parent="." unique_id=1580555560 node_paths=PackedStringArray("spawn_pos") instance=ExtResource("2_nwr2e")]
-transform = Transform3D(-0.9663312, 0, -0.25730142, 0, 1, 0, 0.25730142, 0, -0.9663312, -12.052189, 8.232229, -32.10248)
-spawn_pos = NodePath("../Marker3D")
+[node name="player" parent="." unique_id=1580555560 instance=ExtResource("2_nwr2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.214186, -5.2792315, 41.990257)
 
 [node name="CanvasLayer" parent="." unique_id=1289846114 instance=ExtResource("3_4f56f")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=731325001]
-stream = ExtResource("4_pekqs")
-autoplay = true
 bus = &"musicafondo"
 
 [node name="Control" parent="." unique_id=1698534508 instance=ExtResource("4_nwr2e")]
 
-[node name="box" parent="." unique_id=581708404 groups=["pesado"] instance=ExtResource("5_4f56f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.2344294, -32.76903)
-
-[node name="Area3D" parent="." unique_id=1091922822 node_paths=PackedStringArray("objetive") instance=ExtResource("6_ehxak")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.810053, 6.4944286, -10.913796)
-objetive = NodePath("../AnimatableBody3D")
-
-[node name="Control2" parent="." unique_id=1527635077 instance=ExtResource("7_ky2co")]
-
-[node name="Control3" parent="." unique_id=1530583176 instance=ExtResource("4_nwr2e")]
-
-[node name="AnimatableBody3D" parent="." unique_id=1450332812 instance=ExtResource("8_dt2mv")]
-transform = Transform3D(-0.012775475, 0, 0.9999184, 0, 1, 0, -0.9999184, 0, -0.012775475, 11.918648, 8.206781, -0.55972147)
-
-[node name="MeshInstance3D" parent="AnimatableBody3D" index="0" unique_id=1581118574]
-transform = Transform3D(6.9067473, 0, 4.656613e-10, 0, 4.834505, 0, 7.450581e-09, 0, 0.4107981, 0.22418731, 0.6335707, 0.0028657913)
-
-[node name="CollisionShape3D" parent="AnimatableBody3D" index="1" unique_id=2104153548]
-transform = Transform3D(6.9067473, 0, 8.1490725e-10, 0, 4.834505, 0, 7.450581e-09, 0, 0.1438615, 0.22418731, 0.6335707, 0.0028657913)
-
-[node name="Marker3D" type="Marker3D" parent="." unique_id=1805281629]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.052189, 8.232229, -32.10248)
-
-[node name="lus" parent="." unique_id=1826984970 instance=ExtResource("9_n8cy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.406394, 6.440197, -18.652985)
-
-[node name="farola" parent="." unique_id=1870643421 instance=ExtResource("10_aqkjv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.11594, 7.7879066, -5.1669407)
-
-[node name="Area3D2" parent="." unique_id=991904245 instance=ExtResource("11_dayf4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.597265, 6.154255, -26.249298)
-
-[node name="CollisionShape3D" parent="Area3D2" index="0" unique_id=901691573]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.657494, 1.0412359, 29.436577)
-
 [connection signal="did" from="Control" to="player" method="_on_control_did"]
-[connection signal="did" from="Control3" to="player" method="_on_control_3_did"]
-
-[editable path="AnimatableBody3D"]
-[editable path="Area3D2"]

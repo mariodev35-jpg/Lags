@@ -14,8 +14,6 @@ func use():
 	encendido = true
 	
 	if encendido == true:
-		var tewn = create_tween()
-		tewn.tween_property($OmniLight3D,"range",1,1.5)
 		$OmniLight3D.show()
 		$Sprite3D.visible = false
 		$AnimatedSprite3D.play("Encender")

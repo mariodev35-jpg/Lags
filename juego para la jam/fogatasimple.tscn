@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c662kgyxrxwm2" path="res://fogatasimple.gd" id="1_m8iw4"]
 [ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="2_jel3a"]
 [ext_resource type="AudioStream" uid="uid://b4d86xtpsh82w" path="res://Efectos de sonidos /Ambiente /crepitar fuego.ogg" id="2_wmtqq"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://by3y7hu5b1fip" path="res://Efectos de sonidos /Ambiente /encendido fuego.ogg" id="3_2725b"]
 [ext_resource type="PackedScene" uid="uid://0mond8in7esu" path="res://3D/Fogata.tscn" id="3_ql2cf"]
 [ext_resource type="Texture2D" uid="uid://dxeodcdvve6ub" path="res://Sprite /piesa_icono_luz1.png" id="4_2aryq"]
@@ -46,48 +47,14 @@ animations = [{
 [ext_resource type="AudioStream" uid="uid://by3y7hu5b1fip" path="res://Efectos de sonidos /Ambiente /encendido fuego.ogg" id="3_ql2cf"]
 [ext_resource type="Texture2D" uid="uid://bgqn66w86arq4" path="res://Efectos visuales/Sprite-fuego_32x36.png" id="4_2aryq"]
 [ext_resource type="PackedScene" uid="uid://ceh4a3hiqyvip" path="res://Modelos/Antorcha.glb" id="5_2725b"]
+=======
+>>>>>>> parent of d7fa278... Last Sync: 2026-03-28 18:56 (Mobile)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m8iw4"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_wmtqq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ql2cf"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2725b"]
-atlas = ExtResource("4_2aryq")
-region = Rect2(0, 0, 32, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jel3a"]
-atlas = ExtResource("4_2aryq")
-region = Rect2(32, 0, 32, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_okyr0"]
-atlas = ExtResource("4_2aryq")
-region = Rect2(64, 0, 32, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_343j7"]
-atlas = ExtResource("4_2aryq")
-region = Rect2(96, 0, 32, 36)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dr65a"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2725b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jel3a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_okyr0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_343j7")
-}],
-"loop": true,
-"name": &"Encender",
-"speed": 5.0
-}]
 
 [node name="lus" type="StaticBody3D" unique_id=1826984970 groups=["inter", "lus"]]
 script = ExtResource("1_m8iw4")
@@ -108,9 +75,8 @@ transform = Transform3D(0.6606666, 0, 0, 0, 1, 0, 0, 0, 0.63638663, 0, 0, 0)
 visible = false
 mesh = SubResource("PlaneMesh_m8iw4")
 
-[node name="Base_001" type="MeshInstance3D" parent="." unique_id=1118667745]
-transform = Transform3D(0.75833243, 0, 0, 0, 1, 0, 0, 0, 0.5872395, 0, 0.37670326, 0)
-visible = false
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1118667745]
+transform = Transform3D(0.75833243, 0, 0, 0, 1, 0, 0, 0, 0.5872395, 0, 0.50399685, 0)
 mesh = SubResource("PrismMesh_wmtqq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2017451390]
@@ -119,31 +85,3 @@ shape = SubResource("BoxShape3D_ql2cf")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1711875772]
 stream = ExtResource("2_wmtqq")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=6301660]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3577564, 0)
-light_color = Color(1, 0.34509805, 0, 1)
-omni_range = 9.76231
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=964269727]
-transform = Transform3D(0.549397, 0, 0, 0, 0.5604091, 0, 0, 0, 1, 0, 0.88634133, 0)
-billboard = 1
-texture = ExtResource("3_jel3a")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=683710204]
-stream = ExtResource("3_ql2cf")
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=715307988]
-transform = Transform3D(4.0196147, 0, 0, 0, 3.9903903, 0, 0, 0, 1, 0, 0.8250768, 0)
-visible = false
-billboard = 1
-sprite_frames = SubResource("SpriteFrames_dr65a")
-animation = &"Encender"
-
-[node name="Antorcha" parent="." unique_id=2061481346 instance=ExtResource("5_2725b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0110343, 0)
-
-[node name="Base" parent="Antorcha" index="0" unique_id=793866833]
-visible = false
-
-[editable path="Antorcha"]

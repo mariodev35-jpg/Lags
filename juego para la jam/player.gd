@@ -151,7 +151,3 @@ func _on_suelodetect_body_entered(body: Node3D) -> void:
 
 func _on_control_did() -> void:
 	did()
-
-
-func _on_control_3_did() -> void:
-	pass # Replace with function body.

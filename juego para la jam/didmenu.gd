@@ -3,11 +3,9 @@ signal did
 func _process(delta: float) -> void:
 	if Global.did == true:
 		show()
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		get_tree().paused = true
 	else:
 		hide()
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		get_tree().paused = false
 
 

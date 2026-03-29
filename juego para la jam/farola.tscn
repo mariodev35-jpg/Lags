@@ -48,6 +48,7 @@ animations = [{
 }]
 
 [node name="farola" type="StaticBody3D" unique_id=1870643421 groups=["inter", "lus"]]
+visible = false
 script = ExtResource("1_m25s7")
 metadata/_custom_type_script = "uid://ssbrhor7yy2x"
 
@@ -86,7 +87,6 @@ visible = false
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_wojyf")
 animation = &"Encender"
-autoplay = "Encender"
 frame_progress = 0.15937996
 
 [node name="Antorcha" parent="." unique_id=514758733 instance=ExtResource("5_wlayv")]

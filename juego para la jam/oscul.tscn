@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://8wdokvkv7r07" path="res://oscul.gd" id="1_r7kt0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ll5y4"]
-size = Vector3(90.61058, 45.403778, 84.90198)
+size = Vector3(44.760635, 9.10511, 18.91922)
 
 [node name="Area3D" type="Area3D" unique_id=991904245]
 script = ExtResource("1_r7kt0")
